@@ -28,7 +28,7 @@ class UserRequest extends FormRequest
                 return [
                     'name' => 'required',
                     'email' => 'required|email|unique:users,email',
-                    'password' => 'required|same:confirm-password',
+                    'password' => 'required|same:confirm-password|min:6',
                     'roles' => 'required|array'
                 ];
 
@@ -38,7 +38,7 @@ class UserRequest extends FormRequest
                 return [
                     'name' => 'required',
                     'email' => 'required|email|unique:users,email,'.$id,
-                    'password' => 'same:confirm-password',
+                    'password' => 'nullable|same:confirm-password|min:6',
                     'roles' => 'required|array'
                 ];
 

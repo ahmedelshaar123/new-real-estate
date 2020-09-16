@@ -91,15 +91,13 @@ class UserController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        $requestData = $request->all();
-        if(!empty($requestData['password'])){
-            $requestData['password'] = Hash::make($requestData['password']);
-        }else{
-            $requestData = array_except($requestData,array('password'));
-        }
-
         $user = User::find($id);
-        $user->update($requestData);
+        if($request->password) {
+            $request->merge(['password' => bcrypt($request->password)]);
+            $user->update($request->all());
+        }else{
+            $user->update($request->except('password'));
+        }
         DB::table('model_has_roles')->where('model_id',$id)->delete();
         $user->assignRole($request->input('roles'));
         session()->flash('key', trans('admin.edited'));
