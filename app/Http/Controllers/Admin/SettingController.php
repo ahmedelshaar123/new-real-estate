@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+use App\Http\Requests\SettingRequest;
+use App\Models\Setting;
+use Illuminate\Routing\Controller;
+
+class SettingController extends Controller
+{
+    public function index(){
+        $settings = Setting::where('type', '!=', 'map')->get();
+        $lat = Setting::where('key', 'lat')->first();
+        $lng = Setting::where('key', 'lng')->first();
+        $lang = \LaravelLocalization::getCurrentLocale();
+        $name = 'name_' . $lang;
+        $value = 'value_' . $lang;
+        return view('admin.settings.index_edit', compact('settings', 'name', 'value', 'lat', 'lng'));
+    }
+
+    public function update(SettingRequest $request)
+    {
+        $lang = \LaravelLocalization::getCurrentLocale();
+        $val = 'value_' . $lang;
+        $requestData = $request->all();
+        foreach($requestData as $key=>$value)
+        {
+            $settings = Setting::all();
+            foreach ($settings as $setting) {
+                if($setting->type == 'url' || $setting->type == 'email' || $setting->type == 'number' || $setting->type == 'map') {
+                    $setting->where('key', $key)->update(['value_ar' => $value, 'value_en' => $value]);
+                }else {
+                    $setting->where('key', $key)->update([$val => $value]);
+                }
+            }
+        }
+        session()->flash('key', trans('admin.edited'));
+        return back();
+    }
+}
