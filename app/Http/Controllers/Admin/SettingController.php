@@ -26,10 +26,10 @@ class SettingController extends Controller
         {
             $settings = Setting::all();
             foreach ($settings as $setting) {
-                if($setting->type == 'url' || $setting->type == 'email' || $setting->type == 'number' || $setting->type == 'map') {
-                    $setting->where('key', $key)->update(['value_ar' => $value, 'value_en' => $value]);
-                }else {
+                if($key == 'address' || $key == 'work_times') {
                     $setting->where('key', $key)->update([$val => $value]);
+                }else {
+                    $setting->where('key', $key)->update(['value_ar' => $value, 'value_en' => $value]);
                 }
             }
         }

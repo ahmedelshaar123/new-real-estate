@@ -34,7 +34,9 @@ class StaticPageController extends Controller
         foreach($requestData as $key=>$value)
         {
             foreach ($staticPages as $staticPage) {
-                if($staticPage->type != 'image') {
+                if($key == 'vision_image' || $key == 'message_image' || $key == 'desc_image') {
+                    $staticPage->where('key', $key)->update(['value_ar' => $value, 'value_en' => $value]);
+                }else{
                     $staticPage->where('key', $key)->update([$val => $value]);
                 }
             }
