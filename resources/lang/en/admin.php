@@ -191,7 +191,7 @@ return [
     'top' => 'Top Sliders',
     'static_pages' => 'Static Pages',
     'lang' => 'Language',
-    'all_rights_reserved' => 'All Rights Reserved',
+    'all_rights_reserved' => 'All Rights Reserved Smart Level',
     'login' => 'Login',
     'choose_ser_or_more' => 'Choose Service Or More',
     'roles' => 'User Roles',

@@ -187,7 +187,7 @@ return [
     'static_pages' => 'الصفحات الثابتة',
     'top' => 'الشرائح بالأعلي',
     'lang' => 'اللغة',
-    'all_rights_reserved' => 'كل الحقوق محفوظة',
+    'all_rights_reserved' => 'كل الحقوق محفوظة سمارت ليفل',
     'login' => 'تسجيل الدخول',
     'choose_ser_or_more' => 'اختر خدمة أو أكثر',
     'roles' => 'أدوار المستخدم',
