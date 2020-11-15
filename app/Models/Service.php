@@ -10,7 +10,7 @@ class Service extends Model
     protected $table = 'services';
     public $timestamps = true;
     protected $fillable = array('title_ar', 'title_en', 'desc_ar', 'desc_en');
-    protected $appends = array('image');
+    protected $appends = array('image', 'icon');
 
     public function posts()
     {
@@ -25,6 +25,11 @@ class Service extends Model
     public function getImageAttribute()
     {
         return $this->photo()->count() ? asset($this->photo->path) : null;
+    }
+
+    public function getIconAttribute()
+    {
+        return $this->photo()->count() ? asset($this->photo->icon) : null;
     }
 
 }

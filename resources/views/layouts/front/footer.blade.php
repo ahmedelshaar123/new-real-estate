@@ -32,27 +32,27 @@
                                 </a>
                             </li>
                             <li class="mb-3 ">
-                                <a href="# " class=" text-white ">
+                                <a href="{{url('services')}} " class=" text-white ">
                                     <i class="fas fa-play sec-color "></i> خدماتنا</a>
                             </li>
 
 
                             <li class="mb-3 ">
-                                <a href="# " class=" text-white ">
+                                <a href="{{url('team')}}" class=" text-white ">
                                     <i class="fas fa-play sec-color "></i> فريق الشركة</a>
                             </li>
                             <li class="mb-3 ">
-                                <a href="# " class=" text-white ">
+                                <a href="{{url('posts')}}" class=" text-white ">
                                     <i class="fas fa-play sec-color "></i> أخبار العقارات</a>
 
                             </li>
                             <li class="mb-3 ">
-                                <a href="# " class=" text-white ">
+                                <a href="{{url('partners')}}" class=" text-white ">
                                     <i class="fas fa-play sec-color "></i> شركائنا
                                 </a>
                             </li>
                             <li class="mb-3 ">
-                                <a href="# " class=" text-white ">
+                                <a href="{{url('contact-us')}} " class=" text-white ">
                                     <i class="fas fa-play sec-color "></i> تواصل معنا</a>
                             </li>
 

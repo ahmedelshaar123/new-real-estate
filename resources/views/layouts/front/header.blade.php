@@ -35,6 +35,7 @@
         </div>
 
     </div>
+    @include('layouts.partials.validation-errors')
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg py-2  w-100">
 
@@ -47,7 +48,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
 
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="index.html"> الرئيسية <span class="sr-only">(current)</span></a>
                     </li>
 
@@ -55,23 +56,23 @@
                         <a class="nav-link" href="about.html">تعرف علينا</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">خدماتنا </a>
+                    <li class="nav-item {{request()->segment(2) == 'services' ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('services')}} ">خدماتنا </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html"> أخبارنا</a>
+                    <li class="nav-item {{request()->segment(2) == 'posts' ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('posts')}}"> أخبارنا</a>
 
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="team.html">فريق الشركة</a>
+                    <li class="nav-item {{request()->segment(2) == 'team' ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('team')}}">فريق الشركة</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="companies.html">شركائنا </a>
+                    <li class="nav-item {{request()->segment(2) == 'partners' ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('partners')}}">شركائنا </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html"> اتصل بنا</a>
+                    <li class="nav-item {{request()->segment(2) == 'contact-us' ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('contact-us')}} "> اتصل بنا</a>
 
                     </li>
 

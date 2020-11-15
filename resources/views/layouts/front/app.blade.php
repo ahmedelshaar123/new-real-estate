@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> شركة عقارية</title>
     <link rel="icon" href="{{asset('front/dist/img/favicon.ico')}}" sizes="16x16">
-
     <link rel="stylesheet" href="{{asset('front/dist/css/jsRapStar.css')}}" />
     <link rel="stylesheet" href="{{asset('front/dist/css/main.css')}}">
+    @stack('styles')
 </head>
 
 <body class="rtl" dir='rtl'>
@@ -42,7 +42,8 @@
             }
         });
     </script>
+    @stack('scripts')
 
     <!-- </body> -->
-
+</body>
 </html>
