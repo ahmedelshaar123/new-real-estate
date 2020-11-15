@@ -1,4 +1,4 @@
-@extends('layouts.app_admin',[
+@extends('layouts.admin.app',[
             'page_header'       => trans('admin.site'),
             'page_description'       => trans('admin.top'),
 
