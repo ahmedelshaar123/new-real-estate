@@ -25,15 +25,6 @@ class StaticPagesTableSeeder extends Seeder
             ],
 
             [
-                'name_ar' => 'صورة الرؤية',
-                'name_en' => 'Vision Image',
-                'value_ar' => '',
-                'value_en' => '',
-                'type' => 'image',
-                'key' => 'vision_image',
-            ],
-
-            [
                 'name_ar' => 'الرسالة',
                 'name_en' => 'Message',
                 'value_ar' => '<p class="main-color lead">
@@ -45,14 +36,6 @@ class StaticPagesTableSeeder extends Seeder
 
             ],
 
-            [
-                'name_ar' =>  'صورة الرسالة',
-                'name_en' => 'Message Image',
-                'value_ar' => '',
-                'value_en' => '',
-                'type' => 'image',
-                'key' => 'message_image',
-            ],
             [
                 'name_ar' => 'العنوان',
                 'name_en' => 'Title',
@@ -75,15 +58,6 @@ A real estate company that seeks to provide real estate services with credibilit
             ],
 
             [
-                'name_ar' =>  'صورة الوصف',
-                'name_en' => 'Description Image',
-                'value_ar' => '',
-                'value_en' => '',
-                'type' => 'image',
-                'key' => 'desc_image',
-            ],
-
-            [
                 'name_ar' => 'الوصف أسفل الصفحة',
                 'name_en' => 'Footer Description',
                 'value_ar' => '<p class="text-light mb-5">
@@ -98,21 +72,5 @@ A real estate company that seeks to provide real estate services with credibilit
         foreach ($values as $value) {
             \App\Models\StaticPage::create($value);
         }
-
-        \App\Models\Photo::create([
-            'path' => 'uploads/static pages/about1.png',
-            'photoable_type' => 'App\Models\StaticPage',
-            'photoable_id' => '2',
-        ]);
-        \App\Models\Photo::create([
-            'path' => 'uploads/static pages/about2.png',
-            'photoable_type' => 'App\Models\StaticPage',
-            'photoable_id' => '4',
-        ]);
-        \App\Models\Photo::create([
-            'path' => 'uploads/static pages/desc image.png',
-            'photoable_type' => 'App\Models\StaticPage',
-            'photoable_id' => '7',
-        ]);
     }
 }

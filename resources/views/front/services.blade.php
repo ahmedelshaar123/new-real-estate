@@ -17,7 +17,7 @@
         @if(count($services))
         @foreach($services as $service)
         <div class="row py-5">
-            <div class=" col-lg-6 order-2">
+            <div class=" col-lg-6 {{$loop->iteration % 2 == 1 ? 'order-2' : 'order-1'}}">
                 <div class=" px-3 py-4   mb-4 mb-lg-0">
                     <img src='{{$service->icon}}' class="mb-3" />
                     <h3 class=" main-color mb-4">
@@ -28,7 +28,7 @@
                     </p>
                 </div>
             </div>
-            <div class=" col-lg-6 order-1 order-lg-12">
+            <div class=" col-lg-6 {{$loop->iteration % 2 == 1 ? 'order-1' : 'order-2'}} order-lg-12">
                 <img src='{{$service->image}}' />
             </div>
         </div>
@@ -41,15 +41,15 @@
     <div class=" bg-light py-5">
         <div class="container">
             <div class="parteners owl-carousel owl-carousel-carousel">
-                <div class="p-3">
-                    @if(count($partners))
+                @if(count($partners))
                     @foreach($partners as $partner)
-                        <img src="{{$partner->image}}" />
+                        <div class="p-3">
+                            <img src="{{$partner->image}}" />
+                        </div>
                     @endforeach
-                    @else
-                        <h3>لا يوجد عملاء</h3>
-                    @endif
-                </div>
+                @else
+                    <h3>لا يوجد شركاء</h3>
+                @endif
             </div>
         </div>
     </div>

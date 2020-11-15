@@ -16,6 +16,7 @@ Route::group(
         Route::get('team', 'TeamController@index');
         Route::get('contact-us', 'ContactController@index');
         Route::get('posts', 'PostController@index');
+        Route::get('about', 'AboutController@index');
         Route::post('contact-us', 'ContactController@contact')->name('contact-us');
 
     });
