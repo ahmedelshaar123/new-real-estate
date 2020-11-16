@@ -5,8 +5,8 @@
         <div class="position-absolute">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{url('/')}}">الرئيسية</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">تواصل معنا</li>
+                    <li class="breadcrumb-item"><a href="{{url('/')}}">@lang('front.home')</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@lang('front.contact_us')</li>
                 </ol>
             </nav>
 
@@ -98,31 +98,31 @@
                     <form class="py-3 px-2 px-lg-4 " method="post" action="{{route('contact-us')}}">
                         @csrf
                         <h3 class="mb-5 h2 font-weight-bold ">
-                            تواصل معنا
+                            @lang('front.contact_us')
                         </h3>
                         <div class="row ">
                             <div class="col-lg-6 ">
-                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text" placeholder="اﻻسم " name="name">
+                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text" placeholder="@lang('front.name') " name="name">
 
                             </div>
                             <div class="col-lg-6 ">
-                                <input class="form-control form-control-lg rounded-0 mb-3 " type="email" placeholder="البريد اﻻلكتورنى " name="email">
+                                <input class="form-control form-control-lg rounded-0 mb-3 " type="email" placeholder="@lang('front.email') " name="email">
 
                             </div>
                             <div class="col-lg-6 ">
-                                <input class="form-control form-control-lg rounded-0 mb-3 " type="number" placeholder="رقم الجوال " name="phone">
+                                <input class="form-control form-control-lg rounded-0 mb-3 " type="number" placeholder="@lang('front.phone') " name="phone">
 
                             </div>
                             <div class="col-lg-6 ">
-                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text" placeholder="الموضوع " name="title">
+                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text" placeholder="@lang('front.title') " name="title">
 
                             </div>
                             <div class="col-lg-12 ">
-                                <textarea rows="6 " class="form-control rounded-0 mb-3 " placeholder="الرسالة " name="message"></textarea>
+                                <textarea rows="6 " class="form-control rounded-0 mb-3 " placeholder="@lang('front.message') " name="message"></textarea>
 
                             </div>
                             <div class="col-lg-12 mt-4 ">
-                                <button type="submit" class="btn effect01 px-4 pt-2 pb-3 rounded-0 "><span class="px-4 ">ارسال</span></button>
+                                <button type="submit" class="btn effect01 px-4 pt-2 pb-3 rounded-0 "><span class="px-4 ">@lang('front.send')</span></button>
                             </div>
                         </div>
                     </form>

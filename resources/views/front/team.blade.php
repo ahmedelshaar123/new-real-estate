@@ -5,8 +5,8 @@
         <div class="position-absolute">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{url('/')}}">الرئيسية</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">فريق الشركة</li>
+                    <li class="breadcrumb-item"><a href="{{url('/')}}">@lang('front.home')</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@lang('front.company_team')</li>
                 </ol>
             </nav>
 
@@ -16,10 +16,11 @@
     <div class="pt-5">
         <div class="container py-5">
             <h3 class=" text-black-50 text-center mb-3 h2 font-weight-bold">
-                الفريق
+                @lang('front.team')
             </h3>
             <p class=" text-center text-black-50 lead mb-5">
-                نحن فريق متكامل و نسعى الى تقديم اﻷفضل
+                @lang('front.we_are_an_integrated_team_and_we_strive_to_provide_the_best')
+
             </p>
             <div class="team owl-carousel owl-carousel-carousel my-5">
                 @if(count($team))
@@ -54,7 +55,7 @@
                 </div>
                 @endforeach
                 @else
-                    <h3>لا يوجد موظفين</h3>
+                    <h3>@lang('front.no_employees')</h3>
                 @endif
             </div>
         </div>
@@ -68,7 +69,7 @@
                     </div>
                     @endforeach
                     @else
-                        <h3>لا يوجد شركاء</h3>
+                        <h3>@lang('front.no_partners')</h3>
                     @endif
                 </div>
             </div>

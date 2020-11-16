@@ -24,57 +24,57 @@
                     <div class="row ">
                         <div class="col-lg-6 ">
                             <h3 class=" sec-color mb-4 font-weight-bold ">
-                                روابط سريعة
+                                @lang('front.fast_links')
                             </h3>
                             <li class="mb-3 ">
                                 <a href="{{url('/')}}" class=" text-white ">
-                                    <i class="fas fa-play sec-color "></i> الرئيسية
+                                    <i class="fas fa-play sec-color "></i> @lang('front.home')
                                 </a>
                             </li>
                             <li class="mb-3 ">
                                 <a href="{{url('services')}} " class=" text-white ">
-                                    <i class="fas fa-play sec-color "></i> خدماتنا</a>
+                                    <i class="fas fa-play sec-color "></i> @lang('front.our_services')</a>
                             </li>
 
 
                             <li class="mb-3 ">
                                 <a href="{{url('team')}}" class=" text-white ">
-                                    <i class="fas fa-play sec-color "></i> فريق الشركة</a>
+                                    <i class="fas fa-play sec-color "></i>@lang('front.company_team')</a>
                             </li>
                             <li class="mb-3 ">
                                 <a href="{{url('posts')}}" class=" text-white ">
-                                    <i class="fas fa-play sec-color "></i> أخبار العقارات</a>
+                                    <i class="fas fa-play sec-color "></i>@lang('front.real_estates_news')</a>
 
                             </li>
                             <li class="mb-3 ">
                                 <a href="{{url('partners')}}" class=" text-white ">
-                                    <i class="fas fa-play sec-color "></i> شركائنا
+                                    <i class="fas fa-play sec-color "></i> @lang('front.our_partners')
                                 </a>
                             </li>
                             <li class="mb-3 ">
                                 <a href="{{url('contact-us')}} " class=" text-white ">
-                                    <i class="fas fa-play sec-color "></i> تواصل معنا</a>
+                                    <i class="fas fa-play sec-color "></i>@lang('front.contact_us')</a>
                             </li>
 
                         </div>
                         <div class="col-lg-6 ">
                             <h3 class=" sec-color h4 mb-4 font-weight-bold ">
-                                تواصل معنا
+                                @lang('front.contact_us')
                             </h3>
                             <h6 class="mb-3 ">
-                                العنوان : {{$addressVC->$valueVC}}
+                                @lang('front.address') : {{$addressVC->$valueVC}}
                             </h6>
 
                             <h6 class="mb-3 ">
-                                البريد اﻻلكتورنى : {{$emailVC->$valueVC}}
+                                @lang('front.email') : {{$emailVC->$valueVC}}
                             </h6>
                             <h6 class="mb-3 ">
-                                رقم الجوال : <span class="number ">
+                                @lang('front.phone') : <span class="number ">
                                       +{{$phoneVC->$valueVC}}
                                   </span>
                             </h6>
                             <h6 class="mb-3 ">
-                                مواعيد العمل : {{$workTimesVC->$valueVC}}
+                                @lang('front.work_times') : {{$workTimesVC->$valueVC}}
                             </h6>
 
                         </div>
@@ -91,7 +91,8 @@
             <div class="col-lg-4 ">
                 <div class=" border border-silver rounded p-3 mt-5 ">
                     <h5 class=" h6 text-white mb-4 ">
-                        لا تفوت المتابعة و اﻻشتراك فى خدماتنا الجديدة أو يمكنك متابعتنا اﻵن
+                        @lang('front.do_not_miss_to_follow_up_and_subscribe_to_our_new_services_or_you_can_follow_us_now')
+
                     </h5>
                     <form method="post" action="{{route('email-subscribe')}}">
                         @csrf
@@ -102,7 +103,7 @@
                                             <i class=" fa fa-arrow-left "></i>
                                         </button>
                             </div>
-                            <input type="email" class="form-control form-control-lg text-right " name="email" placeholder="البريد اﻻلكترونى " aria-label="Recipient 's username" aria-describedby="basic-addon2" style="border-bottom-left-radius: 0px;
+                            <input type="email" class="form-control form-control-lg text-right " name="email" placeholder="@lang('front.email') " aria-label="Recipient 's username" aria-describedby="basic-addon2" style="border-bottom-left-radius: 0px;
                                                         border-top-left-radius: 0px ;
                                                         border-top-right-radius: 5px;
                                                         border-bottom-right-radius: 5px;">
@@ -115,7 +116,7 @@
 </footer>
 <div class="bg-light">
     <div class="container py-3 clearfix">
-        <h5 class="text-black mb-0 mt-3" style="line-height: 2;">جميع الحقوق محفوظة © 2020 <a href="# " class="sec-color "> Smart Level</a>
+        <h5 class="text-black mb-0 mt-3" style="line-height: 2;">@lang('front.all_rights_reserved') © 2020 <a href="# " class="sec-color "> Smart Level</a>
             <span class="float-left ">
                     <img src='{{asset('front/ dist/img/smart-level.png ')}}' width="200"/>
                 </span>

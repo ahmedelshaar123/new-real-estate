@@ -5,8 +5,8 @@
         <div class="position-absolute">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{url('/')}}">الرئيسية</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">خدماتنا</li>
+                    <li class="breadcrumb-item"><a href="{{url('/')}}">@lang('front.home')</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@lang('front.our_services')</li>
                 </ol>
             </nav>
 
@@ -36,7 +36,7 @@
         @endforeach
         {{$services->links()}}
         @else
-            <h3>لا توجد خدمات</h3>
+            <h3>@lang('front.no_services')</h3>
         @endif
     </div>
     <div class=" bg-light py-5">
@@ -49,7 +49,7 @@
                         </div>
                     @endforeach
                 @else
-                    <h3>لا يوجد شركاء</h3>
+                    <h3>@lang('front.no_partners')</h3>
                 @endif
             </div>
         </div>

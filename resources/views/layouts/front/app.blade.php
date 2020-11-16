@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> شركة عقارية</title>
+    <title>@lang('front.real_estate')</title>
     <link rel="icon" href="{{asset('front/dist/img/favicon.ico')}}" sizes="16x16">
     <link rel="stylesheet" href="{{asset('front/dist/css/jsRapStar.css')}}" />
     <link rel="stylesheet" href="{{asset('front/dist/css/main.css')}}">
