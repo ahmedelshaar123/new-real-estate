@@ -27,7 +27,7 @@
                     </div>
                     <div class="col">
                         <h3 class=" main-color h5">
-                            المنصورة شارع جيهان المنصورة شارع جيهان المنصورة شارع جيهان
+                            {{$addressVC->$valueVC}}
 
                         </h3>
 
@@ -45,7 +45,7 @@
                     </div>
                     <div class="col">
                         <h3 class=" main-color h5">
-                            test@gmail.com
+                            {{$emailVC->$valueVC}}
 
                         </h3>
 
@@ -64,7 +64,7 @@
                     </div>
                     <div class="col">
                         <h3 class=" main-color h5 number">
-                            +334444456677
+                            +{{$phoneVC->$valueVC}}
                         </h3>
 
                     </div>
@@ -82,7 +82,7 @@
                     </div>
                     <div class="col">
                         <h3 class=" main-color h5">
-                            مواعيد العمل من 9 صباحا الى 10 مساء
+                            {{$workTimesVC->$valueVC}}
 
                         </h3>
 
@@ -134,19 +134,4 @@
     </div>
 @endsection
 
-@push('scripts')
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    @if(session()->has('key'))
-        <script>
-            console.log('ok');
-            // setTimeout(function(){
-            //     $("div.alert").remove();
-            // }, 2000 ); // 2 secs
-            Swal.fire({
-                title: '{{session()->get('key')}}',
-                imageUrl: "{{asset('uploads/logo.png')}}",
-            });
-            location.reload();
-        </script>
-    @endif
-@endpush
+

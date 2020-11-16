@@ -9,7 +9,7 @@ class TopSlider extends Model
 
     protected $table = 'top_sliders';
     public $timestamps = true;
-    protected $fillable = array('desc_ar', 'desc_en', 'link', 'title_ar', 'title_en');
+    protected $fillable = array('desc_ar', 'desc_en', 'title_ar', 'title_en');
     protected $appends = array('image');
 
     public function photo()

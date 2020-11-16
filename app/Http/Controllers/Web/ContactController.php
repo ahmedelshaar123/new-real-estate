@@ -14,7 +14,7 @@ class ContactController extends Controller
 
     public function contact(ContactRequest $request) {
         Contact::create($request->all());
-        session()->flash('key', 'سيتم مراجعة رسالتك من قبل الادارة');
+        session()->flash('success', 'سيتم مراجعة رسالتك من قبل الادارة');
         return redirect(url('/'));
     }
 }

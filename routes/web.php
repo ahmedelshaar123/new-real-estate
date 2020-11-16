@@ -18,6 +18,7 @@ Route::group(
         Route::get('posts', 'PostController@index');
         Route::get('about', 'AboutController@index');
         Route::post('contact-us', 'ContactController@contact')->name('contact-us');
+        Route::post('email-subscribe', 'EmailSubscribeController@subscribeEmail')->name('email-subscribe');
 
     });
 });

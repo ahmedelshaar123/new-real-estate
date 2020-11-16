@@ -18,15 +18,15 @@ class StaticPageController extends Controller
     public function update(StaticPageRequest $request)
     {
         $staticPages = StaticPage::all();
-        if ($request->hasFile('vision_image')) {
-            makeImage($request->file('vision_image'), 'uploads/static pages', $staticPages->where('key', 'vision_image')->first());
-        }
-        if ($request->hasFile('message_image')) {
-            makeImage($request->file('message_image'), 'uploads/static pages', $staticPages->where('key', 'message_image')->first());
-        }
-        if ($request->hasFile('desc_image')) {
-            makeImage($request->file('desc_image'), 'uploads/static pages', $staticPages->where('key', 'desc_image')->first());
-        }
+//        if ($request->hasFile('vision_image')) {
+//            makeImage($request->file('vision_image'), 'uploads/static pages', $staticPages->where('key', 'vision_image')->first());
+//        }
+//        if ($request->hasFile('message_image')) {
+//            makeImage($request->file('message_image'), 'uploads/static pages', $staticPages->where('key', 'message_image')->first());
+//        }
+//        if ($request->hasFile('desc_image')) {
+//            makeImage($request->file('desc_image'), 'uploads/static pages', $staticPages->where('key', 'desc_image')->first());
+//        }
         $lang = \LaravelLocalization::getCurrentLocale();
         $val = 'value_' . $lang;
         $requestData = $request->all();
@@ -34,11 +34,11 @@ class StaticPageController extends Controller
         foreach($requestData as $key=>$value)
         {
             foreach ($staticPages as $staticPage) {
-                if($key == 'vision_image' || $key == 'message_image' || $key == 'desc_image') {
-                    $staticPage->where('key', $key)->update(['value_ar' => $value, 'value_en' => $value]);
-                }else{
+//                if($key == 'vision_image' || $key == 'message_image' || $key == 'desc_image') {
+//                    $staticPage->where('key', $key)->update(['value_ar' => $value, 'value_en' => $value]);
+//                }else{
                     $staticPage->where('key', $key)->update([$val => $value]);
-                }
+//                }
             }
         }
 

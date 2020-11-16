@@ -4,7 +4,7 @@
             <div class="col-lg-3 text-center ">
                 <img src="{{asset('front/dist/img/logo.png')}}" class="mb-4 ">
                 <p class=" text-light mb-5 ">
-                    بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد ما بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد ما بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد ما
+                    {!!$footerDescVC->$valueVC!!}
                 </p>
                 <!-- <a href="# " class=" text-white ">
                 <i class="fab fa-instagram ml-4 "></i>
@@ -27,7 +27,7 @@
                                 روابط سريعة
                             </h3>
                             <li class="mb-3 ">
-                                <a href="# " class=" text-white ">
+                                <a href="{{url('/')}}" class=" text-white ">
                                     <i class="fas fa-play sec-color "></i> الرئيسية
                                 </a>
                             </li>
@@ -62,19 +62,19 @@
                                 تواصل معنا
                             </h3>
                             <h6 class="mb-3 ">
-                                العنوان : شارع جيهان المنصورة آخر شارع المنصورة
+                                العنوان : {{$addressVC->$valueVC}}
                             </h6>
 
                             <h6 class="mb-3 ">
-                                البريد اﻻلكتورنى : test@gmail.com
+                                البريد اﻻلكتورنى : {{$emailVC->$valueVC}}
                             </h6>
                             <h6 class="mb-3 ">
                                 رقم الجوال : <span class="number ">
-                                      +203333004040
+                                      +{{$phoneVC->$valueVC}}
                                   </span>
                             </h6>
                             <h6 class="mb-3 ">
-                                مواعيد العمل : من السبت للخميس 8Am : 2 pm
+                                مواعيد العمل : {{$workTimesVC->$valueVC}}
                             </h6>
 
                         </div>
@@ -93,27 +93,24 @@
                     <h5 class=" h6 text-white mb-4 ">
                         لا تفوت المتابعة و اﻻشتراك فى خدماتنا الجديدة أو يمكنك متابعتنا اﻵن
                     </h5>
-                    <div class="input-group mb-3 " dir="ltr">
-                        <div class="input-group-prepend mr-4 border-0 ">
-                                    <span class="input-group-text sec-bk text-white " id="basic-addon2 " style="border-bottom-left-radius: 5px !important; border-top-left-radius: 5px !important; border-top-right-radius: 0 !important; border-bottom-right-radius:
-                            0 !important; ">
-                                        <i class=" fa fa-arrow-left "></i>
-                                    </span>
+                    <form method="post" action="{{route('email-subscribe')}}">
+                        @csrf
+                        <div class="input-group mb-3 " dir="ltr">
+                            <div class="input-group-prepend mr-4 border-0 ">
+                                        <button type="submit" class="input-group-text sec-bk text-white " id="basic-addon2 " style="border-bottom-left-radius: 5px !important; border-top-left-radius: 5px !important; border-top-right-radius: 0 !important; border-bottom-right-radius:
+                                0 !important; ">
+                                            <i class=" fa fa-arrow-left "></i>
+                                        </button>
+                            </div>
+                            <input type="email" class="form-control form-control-lg text-right " name="email" placeholder="البريد اﻻلكترونى " aria-label="Recipient 's username" aria-describedby="basic-addon2" style="border-bottom-left-radius: 0px;
+                                                        border-top-left-radius: 0px ;
+                                                        border-top-right-radius: 5px;
+                                                        border-bottom-right-radius: 5px;">
                         </div>
-                        <input type="text" class="form-control form-control-lg text-right " placeholder="البريد اﻻلكتورنى " aria-label="Recipient 's username" aria-describedby="basic-addon2" style="border-bottom-left-radius: 0px;
-                                                    border-top-left-radius: 0px ;
-                                                    border-top-right-radius: 5px;
-                                                    border-bottom-right-radius: 5px;">
-
-                    </div>
-
+                    </form>
                 </div>
-
-
             </div>
-
         </div>
-
     </div>
 </footer>
 <div class="bg-light">

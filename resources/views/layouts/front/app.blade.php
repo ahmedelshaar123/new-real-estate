@@ -42,6 +42,19 @@
             }
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    @if(session()->has('success'))
+        <script>
+            // setTimeout(function(){
+            //     $("div.alert").remove();
+            // }, 2000 ); // 2 secs
+            Swal.fire({
+                title: '{{session()->get('success')}}',
+                imageUrl: "{{asset('front/dist/img/logo.png')}}",
+            });
+             // location.reload();
+        </script>
+    @endif
     @stack('scripts')
 
     <!-- </body> -->

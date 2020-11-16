@@ -19,7 +19,6 @@
                         <th class="text-center">#</th>
                         <th class="text-center">{{trans('admin.title')}}</th>
                         <th class="text-center">{{trans('admin.desc')}}</th>
-                        <th class="text-center">{{trans('admin.link')}}</th>
                         <th class="text-center">{{trans('admin.image')}}</th>
                         <th class="text-center">{{trans('admin.edit')}}</th>
                         <th class="text-center">{{trans('admin.delete')}}</th>
@@ -31,7 +30,6 @@
                                 <td class="text-center">{{$loop->iteration}}</td>
                                 <td class="text-center">{{$top_slider->$title}}</td>
                                 <td class="text-center">{!!$top_slider->$desc!!}</td>
-                                <td class="text-center">{{$top_slider->link}}</td>
                                 <td class="text-center">
                                     <img src="{{asset($top_slider->photo->path)}}"
                                          alt="" style="height: 50px;">

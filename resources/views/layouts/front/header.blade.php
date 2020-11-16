@@ -5,27 +5,27 @@
                 <div class="col-12">
                     <a href="mailto:test@gmail.com">
                         <h5 class="d-inline-block pl-3 text-light">
-                            <i class=" fa fa-envelope ml-1"></i> example@gmail.com
+                            <i class=" fa fa-envelope ml-1"></i> {{$emailVC->$valueVC}}
                         </h5>
                     </a>
                     <a href="tel:0100000000">
                         <h5 class="d-inline-block pr-3 text-light">
                             <i class=" fa fa-phone"></i>
                             <span class="number">
-                                    +0200055667
+                                    +{{$phoneVC->$valueVC}}
 
                                 </span>
                         </h5>
 
                     </a>
                     <div class="d-block d-md-inline-block  text-center text-md-left float-md-left">
-                        <a href="#" class=" icon-nav" target="_blank">
+                        <a href="{{$instagramVC->$valueVC}}" class=" icon-nav" target="_blank">
                             <i class="fa fa-instagram"></i>
                         </a>
-                        <a href="#" class="mr-4  icon-nav " target="_blank">
+                        <a href="{{$twitterVC->$valueVC}}" class="mr-4  icon-nav " target="_blank">
                             <i class="fa fa-twitter"></i>
                         </a>
-                        <a href="#" class="mr-4  icon-nav" target="_blank">
+                        <a href="{{$facebookVC->$valueVC}}" class="mr-4  icon-nav" target="_blank">
                             <i class="fa fa-facebook"></i>
                         </a>
 
@@ -48,12 +48,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
 
-                    <li class="nav-item ">
-                        <a class="nav-link" href="index.html"> الرئيسية <span class="sr-only">(current)</span></a>
+                    <li class="nav-item {{request()->segment(2) == '' ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('/')}}"> الرئيسية <span class="sr-only">(current)</span></a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">تعرف علينا</a>
+                    <li class="nav-item {{request()->segment(2) == 'about' ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('about')}}">تعرف علينا</a>
                     </li>
 
                     <li class="nav-item {{request()->segment(2) == 'services' ? 'active' : '' }}">
@@ -89,56 +89,39 @@
     <!-- Slider -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            @if(count($topSlidersVC))
+            @foreach($topSlidersVC as $topSlider)
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{$loop->iteration-1}}" class="{{$loop->first ? 'active' : ''}}"></li>
+            @endforeach
+            @else
+                <h3>لا توجد شرائح بالأعلي</h3>
+            @endif
+
+
+
 
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active position-relative">
-                <img src="{{asset('front/dist/img/slider1 (1).png')}}" class="d-block w-100" alt="...">
-
-
-                <div class="over-trans position-absolute text-center text-light">
-                    <div class=" w-50 mx-auto">
-                        <h6 class="mt-5 h5 mb-4 pt-3">
-                            الشركة العقارية
-                        </h6>
-                        <h4 class=" font-weight-bold mb-4 h3">
-                            شركة عقارية تسعى فى تقديم الخدمات العقارية بمصداقية بتحقيق أقصي درجات القبول لدى العملاء
-                        </h4>
-                        <p class="text-center lead">
-                            شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات
-                        </p>
-                        <a href="#" class="btn effect01 px-3 pt-2 pb-3 rounded-0" target="_blank"><span>تعرف علينا</span></a>
-                        <a href="#" class="btn effect01 px-4 pt-2 pb-3 rounded-0 white mr-4" target="_blank"><span>البدء</span></a>
-
-
-                    </div>
-
-
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{asset('front/dist/img/slider2 (1).png')}}" class="d-block w-100" alt="...">
-                <div class="over-trans position-absolute text-center text-light">
-                    <div class=" w-50 mx-auto">
-                        <h6 class="mt-5 h5 mb-4 pt-3">
-                            الشركة العقارية
-                        </h6>
-                        <h4 class=" font-weight-bold mb-4 h3">
-                            شركة عقارية تسعى فى تقديم الخدمات العقارية بمصداقية بتحقيق أقصي درجات القبول لدى العملاء
-                        </h4>
-                        <p class="text-center lead">
-                            شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات
-                        </p>
-                        <a href="#" class="btn effect01 px-3 pt-2 pb-3 rounded-0" target="_blank"><span>تعرف علينا</span></a>
-                        <a href="#" class="btn effect01 px-4 pt-2 pb-3 rounded-0 white mr-4" target="_blank"><span>البدء</span></a>
-
-
+            @foreach($topSlidersVC as $topSlider)
+                <div class="carousel-item {{$loop->first ? 'active' : ''}} position-relative">
+                    <img src="{{$topSlider->image}}" class="d-block w-100" alt="...">
+                    <div class="over-trans position-absolute text-center text-light">
+                        <div class=" w-50 mx-auto">
+                            <h6 class="mt-5 h5 mb-4 pt-3">
+                                الشركة العقارية
+                            </h6>
+                            <h4 class=" font-weight-bold mb-4 h3">
+                                {{$topSlider->$titleVC}}
+                            </h4>
+                            <p class="text-center lead">
+                                {!!$topSlider->$descVC!!}
+                            </p>
+                            <a href="{{url('about')}}" class="btn effect01 px-3 pt-2 pb-3 rounded-0"><span>تعرف علينا</span></a>
+                            <a href="{{url('/')}}" class="btn effect01 px-4 pt-2 pb-3 rounded-0 white mr-4"><span>البدء</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            @endforeach
         </div>
     </div>
 </header>

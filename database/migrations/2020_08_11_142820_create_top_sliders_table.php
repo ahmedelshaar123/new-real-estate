@@ -14,7 +14,6 @@ class CreateTopSlidersTable extends Migration {
                 $table->string("title_$key")->nullable();
                 $table->string("desc_$key")->nullable();
             }
-			$table->string('link')->nullable();
 		});
 	}
 

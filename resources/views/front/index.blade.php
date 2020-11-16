@@ -23,10 +23,9 @@
 
                     </h3>
                     <p class="main-color lead mb-4">
-                        شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و
-                        الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات
+                        {!!$description->$value!!}
                     </p>
-                    <a href="#" class="btn effect01 px-4 pt-2 pb-3 rounded-0" target="_blank"><span class="h4 font-weight-bold">اتصل بنا</span></a>
+                    <a href="{{url('contact-us')}}" class="btn effect01 px-4 pt-2 pb-3 rounded-0"><span class="h4 font-weight-bold">اتصل بنا</span></a>
 
 
 
@@ -46,53 +45,25 @@
                 من الخدمات التى تقدمها الشركة
             </h4>
             <div class="row mt-5">
-                <div class="col-lg-4">
-                    <div class="service px-3 py-4  pointer mb-4 mb-lg-0">
-                        <img src='{{asset('front/dist/img/R_E _Y1.png')}}' class="mb-3" />
-                        <h3 class=" main-color mb-4">
-                            التسويق العقارى
-                        </h3>
-                        <p class="main-color lead">
-                            شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات
-
-                        </p>
-
+                @if(count($services))
+                @foreach($services as $service)
+                    <div class="col-lg-4">
+                        <div class="service px-3 py-4  pointer mb-4 mb-lg-0">
+                            <img src='{{$service->icon}}' class="mb-3" />
+                            <h3 class=" main-color mb-4">
+                                {{$service->$title}}
+                            </h3>
+                            <p class="main-color lead">
+                                {!! $service->$desc !!}
+                            </p>
+                        </div>
                     </div>
-
-                </div>
-                <div class="col-lg-4">
-                    <div class="service px-3 py-4  pointer mb-4 mb-lg-0">
-                        <img src='{{asset('front/dist/img/R_E _Y2.png')}}' class="mb-3" />
-                        <h3 class=" main-color mb-4">
-                            ادارة الممتلكات
-                        </h3>
-                        <p class="main-color lead">
-                            شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات
-
-                        </p>
-
-                    </div>
-
-                </div>
-                <div class="col-lg-4">
-                    <div class="service px-3 py-4  pointer mb-4 mb-lg-0">
-                        <img src='{{asset('front/dist/img/R_E _Y3.png')}}' class="mb-3" />
-                        <h3 class=" main-color mb-4">
-                            التثمين العقارى
-                        </h3>
-                        <p class="main-color lead">
-                            شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات
-
-                        </p>
-
-                    </div>
-
-                </div>
-
+                @endforeach
+                @else
+                    <h3>لا توجد خدمات</h3>
+                @endif
             </div>
-
         </div>
-
     </div>
     <div class="galary" id="lightgallery">
         <div class=" container-fluid m-0 p-0 ">

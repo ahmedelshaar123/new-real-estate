@@ -30,12 +30,6 @@
                     ]) !!}
                     <br>
                 @endforeach
-                <label for="link">{{trans("admin.link")}}</label>
-                {!! Form::url("link",null,[
-                        'class'=>'form-control',
-
-                ]) !!}
-                <br>
                 <label for="image">{{trans('admin.image')}}</label>
                 <input name="image" id="img-preview-tag" type="file" onchange="readImg(this, '#img-preview');">
                 <br>
