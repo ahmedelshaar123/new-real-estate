@@ -49,30 +49,30 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item {{request()->segment(2) == '' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('/')}}"> الرئيسية <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{url('/')}}"> @lang('front.home') <span class="sr-only">(current)</span></a>
                     </li>
 
                     <li class="nav-item {{request()->segment(2) == 'about' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('about')}}">تعرف علينا</a>
+                        <a class="nav-link" href="{{url('about')}}">@lang('front.about_us')</a>
                     </li>
 
                     <li class="nav-item {{request()->segment(2) == 'services' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('services')}} ">خدماتنا </a>
+                        <a class="nav-link" href="{{url('services')}} ">@lang('front.our_services') </a>
                     </li>
                     <li class="nav-item {{request()->segment(2) == 'posts' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('posts')}}"> أخبارنا</a>
+                        <a class="nav-link" href="{{url('posts')}}"> @lang('front.our_news')</a>
 
                     </li>
 
                     <li class="nav-item {{request()->segment(2) == 'team' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('team')}}">فريق الشركة</a>
+                        <a class="nav-link" href="{{url('team')}}">@lang('front.company_team')</a>
                     </li>
                     <li class="nav-item {{request()->segment(2) == 'partners' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('partners')}}">شركائنا </a>
+                        <a class="nav-link" href="{{url('partners')}}">@lang('front.our_partners') </a>
                     </li>
 
                     <li class="nav-item {{request()->segment(2) == 'contact-us' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('contact-us')}} "> اتصل بنا</a>
+                        <a class="nav-link" href="{{url('contact-us')}} ">@lang('front.contact_us')</a>
                     </li>
 
                     <a href="#">
@@ -93,7 +93,7 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="{{$loop->iteration-1}}" class="{{$loop->first ? 'active' : ''}}"></li>
             @endforeach
             @else
-                <h3>لا توجد شرائح بالأعلي</h3>
+                <h3>@lang('front.no_top_sliders')</h3>
             @endif
 
 
@@ -107,7 +107,7 @@
                     <div class="over-trans position-absolute text-center text-light">
                         <div class=" w-50 mx-auto">
                             <h6 class="mt-5 h5 mb-4 pt-3">
-                                الشركة العقارية
+                                @lang('front.real_estate')
                             </h6>
                             <h4 class=" font-weight-bold mb-4 h3">
                                 {{$topSlider->$titleVC}}
@@ -115,8 +115,8 @@
                             <p class="text-center lead">
                                 {!!$topSlider->$descVC!!}
                             </p>
-                            <a href="{{url('about')}}" class="btn effect01 px-3 pt-2 pb-3 rounded-0"><span>تعرف علينا</span></a>
-                            <a href="{{url('/')}}" class="btn effect01 px-4 pt-2 pb-3 rounded-0 white mr-4"><span>البدء</span></a>
+                            <a href="{{url('about')}}" class="btn effect01 px-3 pt-2 pb-3 rounded-0"><span>@lang('front.about_us')</span></a>
+                            <a href="{{url('/')}}" class="btn effect01 px-4 pt-2 pb-3 rounded-0 white mr-4"><span>@lang('front.start')</span></a>
                         </div>
                     </div>
                 </div>

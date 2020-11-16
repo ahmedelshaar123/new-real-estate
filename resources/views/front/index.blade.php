@@ -14,18 +14,18 @@
                 </div>
                 <div class="col-lg-6 ">
                     <h6 class=" sec-color mt-5 h5">
-                        الشركة العقارية
+                        @lang('front.real_estate')
 
                     </h6>
                     <h3 class=" main-color mb-4 font-weight-bold">
-                        شركة عقارية تسعى فى تقديم الخدمات العقارية بمصداقية بتحقيق أقصي درجات القبول لدى العملاء
+                        @lang('front.a_real_estate_company_that_seeks_to_provide_real_estate_services_with_credibility_to_achieve_the_highest_levels_of_customer_acceptance')
 
 
                     </h3>
                     <p class="main-color lead mb-4">
                         {!!$description->$value!!}
                     </p>
-                    <a href="{{url('contact-us')}}" class="btn effect01 px-4 pt-2 pb-3 rounded-0"><span class="h4 font-weight-bold">اتصل بنا</span></a>
+                    <a href="{{url('contact-us')}}" class="btn effect01 px-4 pt-2 pb-3 rounded-0"><span class="h4 font-weight-bold">@lang('front.contact_us')</span></a>
 
 
 
@@ -39,10 +39,10 @@
     <div class="py-5 bg-light">
         <div class="container py-5">
             <h3 class=" main-color text-center font-weight-bold h2">
-                خدماتنا
+                @lang('front.our_services')
             </h3>
             <h4 class=" main-color text-center">
-                من الخدمات التى تقدمها الشركة
+                @lang('front.from_services_that_company_provides')
             </h4>
             <div class="row mt-5">
                 @if(count($services))
@@ -60,7 +60,7 @@
                     </div>
                 @endforeach
                 @else
-                    <h3>لا توجد خدمات</h3>
+                    <h3>@lang('front.no_services')</h3>
                 @endif
             </div>
         </div>
@@ -93,7 +93,7 @@
                 </div>
                 @endforeach
                 @else
-                    <h3>لا توجد عقارات مميزة</h3>
+                    <h3>@lang('front.no_featured_real_estates')</h3>
                 @endif
             </div>
         </div>
@@ -101,10 +101,10 @@
     <div class="py-5">
         <div class="container py-5">
             <h3 class=" text-black-50 text-center mb-3 h2 font-weight-bold">
-                الفريق
+                @lang('front.no_services')
             </h3>
             <p class=" text-center text-black-50 lead mb-5">
-                نحن فريق متكامل و نسعى الى تقديم اﻷفضل
+                @lang('front.we_are_an_integrated_team_and_we_strive_to_provide_the_best')
             </p>
             <div class="team owl-carousel owl-carousel-carousel my-5">
                 @if(count($team))
@@ -139,7 +139,7 @@
                         </div>
                     @endforeach
                 @else
-                    <h3>لا يوجد موظفين</h3>
+                    <h3>@lang('front.no_employees')</h3>
                 @endif
         </div>
         <img src='{{asset('front/dist/img/image (1).png')}}' class="w-100" />
@@ -150,7 +150,7 @@
                         <div class=" rounded dropShadow p-4 main-bk text-center mb-4 h-100 pointer hoverable">
                             <img src='{{asset('front/dist/img/city.png')}}' class="mb-4" height="130" />
                             <h2 class="text-white font-weight-bold mb-3">5</h2>
-                            <h4 class="text-white">سنوات الخبرة</h4>
+                            <h4 class="text-white">@lang('front.experience_years')</h4>
 
                         </div>
 
@@ -159,7 +159,7 @@
                         <div class=" rounded dropShadow p-4 bg-white text-center mb-4 h-100 pointer hoverable">
                             <img src='{{asset('front/dist/img/ribbon.png')}}' class="mb-4" height="130" />
                             <h2 class="main-color font-weight-bold mb-3">+20</h2>
-                            <h4 class="main-color">الجوائز و اﻻوسمة</h4>
+                            <h4 class="main-color">@lang('front.rewards_&_trophies')</h4>
 
                         </div>
 
@@ -168,7 +168,7 @@
                         <div class=" rounded dropShadow p-4 sec-bk text-center mb-4 h-100 pointer hoverable">
                             <img src='{{asset('front/dist/img/quality.png')}}' class="mb-4" height="130" />
                             <h2 class="text-white font-weight-bold mb-3">+150</h2>
-                            <h4 class="text-white">الصفقات الناجحة</h4>
+                            <h4 class="text-white">@lang('front.successful_deals')</h4>
 
                         </div>
 
@@ -187,7 +187,7 @@
                         </li>
                         @endforeach
                         @else
-                            <h3>لا توجد شرائح بالأسفل</h3>
+                            <h3>@lang('front.no_bottom_sliders')</h3>
                         @endif
                     </ol>
                     <div class="carousel-inner">
@@ -228,7 +228,7 @@
                             </div>
                         @endforeach
                     @else
-                        <h3>لا يوجد شركاء</h3>
+                        <h3>@lang('front.no_partners')</h3>
                     @endif
                 </div>
             </div>
@@ -237,10 +237,10 @@
     <div class="py-5 ">
         <div class="container pb-5 ">
             <h3 class=" main-color text-center font-weight-bold h2 ">
-                آخر أخبارنا
+                @lang('front.our_latest_news')
             </h3>
             <h4 class=" main-color text-center mb-5 ">
-                تابع [خر أخبارنا و آخر التحديثات
+                @lang('front.follow_our_latest_news_&_latest_updates')
             </h4>
             <div class="row ">
                 @if(count($posts))
@@ -267,7 +267,7 @@
                                             @endif
                                         @endforeach
                                     @else
-                                        <h3>لا توجد خدمات</h3>
+                                        <h3>@lang('front.no_services')</h3>
                                     @endif
                                 </h6>
                                 <h5 class="main-color mb-4 ">{{$post->$title}}</h5>
@@ -284,14 +284,14 @@
                     </div>
                 @endforeach
                 @else
-                    <h3>لا توجد أخبار</h3>
+                    <h3>@lang('front.no_news')</h3>
                 @endif
             </div>
             <div class="col-lg-12 mt-4 text-center ">
                 <a href="{{url('posts')}}">
                     @if($allPosts->count() > 3)
                         <button class="btn effect01 px-4 pt-2 pb-3 rounded-0 "><span class="px-4 ">
-                            استعراض المزيد
+                            @lang('front.show_more')
                         </span></button>
                     @endif
                 </a>
@@ -309,31 +309,31 @@
                     <form class="py-3 px-2 px-lg-4 " method="post" action="{{route('contact-us')}}">
                         @csrf
                         <h3 class="mb-5 h2 font-weight-bold ">
-                            تواصل معنا
+                            @lang('front.contact_us')
                         </h3>
                         <div class="row ">
                             <div class="col-lg-6 ">
-                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text" placeholder="اﻻسم " name="name">
+                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text" placeholder="@lang('front.name') " name="name">
 
                             </div>
                             <div class="col-lg-6 ">
-                                <input class="form-control form-control-lg rounded-0 mb-3 " type="email" placeholder="البريد اﻻلكتورنى " name="email">
+                                <input class="form-control form-control-lg rounded-0 mb-3 " type="email" placeholder="@lang('front.email') " name="email">
 
                             </div>
                             <div class="col-lg-6 ">
-                                <input class="form-control form-control-lg rounded-0 mb-3 " type="number" placeholder="رقم الجوال " name="phone">
+                                <input class="form-control form-control-lg rounded-0 mb-3 " type="number" placeholder="@lang('front.phone') " name="phone">
 
                             </div>
                             <div class="col-lg-6 ">
-                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text" placeholder="الموضوع " name="title">
+                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text" placeholder="@lang('front.title') " name="title">
 
                             </div>
                             <div class="col-lg-12 ">
-                                <textarea rows="6 " class="form-control rounded-0 mb-3 " placeholder="الرسالة " name="message"></textarea>
+                                <textarea rows="6 " class="form-control rounded-0 mb-3 " placeholder="@lang('front.message') " name="message"></textarea>
 
                             </div>
                             <div class="col-lg-12 mt-4 ">
-                                <button type="submit" class="btn effect01 px-4 pt-2 pb-3 rounded-0 "><span class="px-4 ">ارسال</span></button>
+                                <button type="submit" class="btn effect01 px-4 pt-2 pb-3 rounded-0 "><span class="px-4 ">@lang('front.send')</span></button>
                             </div>
                         </div>
                     </form>
