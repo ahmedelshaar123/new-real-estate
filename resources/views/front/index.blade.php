@@ -68,18 +68,20 @@
     <div class="galary" id="lightgallery">
         <div class=" container-fluid m-0 p-0 ">
             <div class="row m-0 p-0">
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                    <a href="{{asset('front/dist/img/article (2).png')}}" class="item">
+                @if(count($featuredEstates))
+                @foreach($featuredEstates as $featuredEstate)
+                    <div class="col-lg-3 col-md-6 p-lg-0">
+                    <a href="{{asset($featuredEstate->photos()->first()->path)}}" class="item">
                         <div class=" position-relative  mb-2 w-100 h-100">
-                            <img src='{{asset('front/dist/img/article (2).png')}}' class="w-100 h-100" />
+                            <img src='{{asset($featuredEstate->photos()->first()->path)}}' class="w-100 h-100" />
                             <div class=" over-sec position-absolute text-light p-3  pointer">
                                 <i class="fa fa-plus fa-3x text-light mt-5"></i>
                                 <!-- <div> -->
                                 <h2>
-                                    فيلا فاخرة
+                                    {{$featuredEstate->$title}}
                                 </h2>
                                 <h5>
-                                    مصر
+                                    {{$featuredEstate->$address}}
                                 </h5>
                                 <!-- </div> -->
 
@@ -89,162 +91,12 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                    <a href="{{asset('front/dist/img/article (3).png')}}" class="item">
-                        <div class=" position-relative  mb-2 w-100 h-100">
-                            <img src='{{asset('front/dist/img/article (3).png')}}' class="w-100 h-100" />
-                            <div class=" over-sec position-absolute text-light p-3  pointer">
-                                <i class="fa fa-plus fa-3x text-light mt-5"></i>
-                                <!-- <div> -->
-                                <h2>
-                                    فيلا فاخرة
-                                </h2>
-                                <h5>
-                                    مصر
-                                </h5>
-                                <!-- </div> -->
-
-
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                    <a href="{{asset('front/dist/img/article (2).png')}}" class="item">
-                        <div class=" position-relative  mb-2 w-100 h-100">
-                            <img src='{{asset('front/dist/img/article (2).png')}}' class="w-100 h-100" />
-                            <div class=" over-sec position-absolute text-light p-3  pointer">
-                                <i class="fa fa-plus fa-3x text-light mt-5"></i>
-                                <!-- <div> -->
-                                <h2>
-                                    فيلا فاخرة
-                                </h2>
-                                <h5>
-                                    مصر
-                                </h5>
-                                <!-- </div> -->
-
-
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                    <a href="{{asset('front/dist/img/article (2).png')}}" class="item">
-                        <div class=" position-relative  mb-2 w-100 h-100">
-                            <img src='{{asset('front/dist/img/article (3).png')}}' class="w-100 h-100" />
-                            <div class=" over-sec position-absolute text-light p-3  pointer">
-                                <i class="fa fa-plus fa-3x text-light mt-5"></i>
-                                <!-- <div> -->
-                                <h2>
-                                    فيلا فاخرة
-                                </h2>
-                                <h5>
-                                    مصر
-                                </h5>
-                                <!-- </div> -->
-
-
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                    <a href="{{asset('front/dist/img/article (2).png')}}" class="item">
-                        <div class=" position-relative  mb-2 w-100 h-100">
-                            <img src='{{asset('front/dist/img/article (4).png')}}' class="w-100 h-100" />
-                            <div class=" over-sec position-absolute text-light p-3  pointer">
-                                <i class="fa fa-plus fa-3x text-light mt-5"></i>
-                                <!-- <div> -->
-                                <h2>
-                                    فيلا فاخرة
-                                </h2>
-                                <h5>
-                                    مصر
-                                </h5>
-                                <!-- </div> -->
-
-
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                    <a href="{{asset('front/dist/img/article (2).png')}}" class="item">
-                        <div class=" position-relative  mb-2 w-100 h-100">
-                            <img src='{{asset('front/dist/img/article (2).png')}}' class="w-100 h-100" />
-                            <div class=" over-sec position-absolute text-light p-3  pointer">
-                                <i class="fa fa-plus fa-3x text-light mt-5"></i>
-                                <!-- <div> -->
-                                <h2>
-                                    فيلا فاخرة
-                                </h2>
-                                <h5>
-                                    مصر
-                                </h5>
-                                <!-- </div> -->
-
-
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                    <a href="{{asset('front/dist/img/article (4).png')}}" class="item">
-                        <div class=" position-relative  mb-2 w-100 h-100">
-                            <img src='{{asset('front/dist/img/article (4).png')}}' class="w-100 h-100" />
-                            <div class=" over-sec position-absolute text-light p-3  pointer">
-                                <i class="fa fa-plus fa-3x text-light mt-5"></i>
-                                <!-- <div> -->
-                                <h2>
-                                    فيلا فاخرة
-                                </h2>
-                                <h5>
-                                    مصر
-                                </h5>
-                                <!-- </div> -->
-
-
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 p-lg-0">
-                    <a href="{{asset('front/dist/img/article (3).png')}}" class="item">
-                        <div class=" position-relative  mb-2 w-100 h-100">
-                            <img src='{{asset('front/dist/img/article (3).png')}}' class="w-100 h-100" />
-                            <div class=" over-sec position-absolute text-light p-3  pointer">
-                                <i class="fa fa-plus fa-3x text-light mt-5"></i>
-                                <!-- <div> -->
-                                <h2>
-                                    فيلا فاخرة
-                                </h2>
-                                <h5>
-                                    مصر
-                                </h5>
-                                <!-- </div> -->
-
-
-                            </div>
-
-                        </div>
-                    </a>
-                </div>
-
+                @endforeach
+                @else
+                    <h3>لا توجد عقارات مميزة</h3>
+                @endif
             </div>
-
         </div>
-
-
-
-
-
     </div>
     <div class="py-5">
         <div class="container py-5">
@@ -255,133 +107,40 @@
                 نحن فريق متكامل و نسعى الى تقديم اﻷفضل
             </p>
             <div class="team owl-carousel owl-carousel-carousel my-5">
-                <div class=" position-relative rounded my-2">
-                    <img src='{{asset('front/dist/img/team1.png')}}' class=" rounded" />
-                    <div class=" over-sec position-absolute text-light p-3 rounded pointer">
-                        <div class="mb-4">
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-facebook-f ml-3 fa-2x"></i>
-                            </a>
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-twitter ml-3 fa-2x"></i>
-                            </a>
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-instagram ml-3 fa-2x"></i>
-                            </a>
-
+                @if(count($team))
+                    @foreach($team as $employee)
+                        <div class=" position-relative rounded my-2">
+                            <img src='{{$employee->image}}' class=" rounded" />
+                            <div class=" over-sec position-absolute text-light p-3 rounded pointer">
+                                <div class="mb-4">
+                                    @if($employee->fb_url != null)
+                                        <a href="{{$employee->fb_url}}" class=" text-light" target="_blank">
+                                            <i class=" fa fa-facebook-f ml-3 fa-2x"></i>
+                                        </a>
+                                    @endif
+                                    @if($employee->tw_url != null)
+                                        <a href="{{$employee->tw_url}}" class=" text-light" target="_blank">
+                                            <i class=" fa fa-twitter ml-3 fa-2x"></i>
+                                        </a>
+                                    @endif
+                                    @if($employee->insta_url != null)
+                                        <a href="{{$employee->insta_url}}" class=" text-light" target="_blank">
+                                            <i class=" fa fa-instagram ml-3 fa-2x"></i>
+                                        </a>
+                                    @endif
+                                </div>
+                                <h2>
+                                    {{$employee->$name}}
+                                </h2>
+                                <h5>
+                                    {{$employee->$job}}
+                                </h5>
+                            </div>
                         </div>
-                        <h2>
-                            على سامح فتحى
-                        </h2>
-                        <h5>
-                            مدير الشركة
-                        </h5>
-
-                    </div>
-
-                </div>
-                <div class=" position-relative rounded my-2">
-                    <img src='{{asset('front/dist/img/team3.png')}}' class=" rounded" />
-                    <div class=" over-sec position-absolute text-light p-3 rounded pointer">
-                        <div class="mb-4">
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-facebook-f ml-3 fa-2x"></i>
-                            </a>
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-twitter ml-3 fa-2x"></i>
-                            </a>
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-instagram ml-3 fa-2x"></i>
-                            </a>
-
-                        </div>
-                        <h2>
-                            على سامح فتحى
-                        </h2>
-                        <h5>
-                            مدير الشركة
-                        </h5>
-
-                    </div>
-
-                </div>
-                <div class=" position-relative rounded my-2">
-                    <img src='{{asset('front/dist/img/team2.png')}}' class=" rounded" />
-                    <div class=" over-sec position-absolute text-light p-3 rounded pointer">
-                        <div class="mb-4">
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-facebook-f ml-3 fa-2x"></i>
-                            </a>
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-twitter ml-3 fa-2x"></i>
-                            </a>
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-instagram ml-3 fa-2x"></i>
-                            </a>
-
-                        </div>
-                        <h2>
-                            على سامح فتحى
-                        </h2>
-                        <h5>
-                            مدير الشركة
-                        </h5>
-
-                    </div>
-
-                </div>
-                <div class=" position-relative rounded my-2">
-                    <img src='{{asset('front/dist/img/team3.png')}}' class=" rounded" />
-                    <div class=" over-sec position-absolute text-light p-3 rounded pointer">
-                        <div class="mb-4">
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-facebook-f ml-3 fa-2x"></i>
-                            </a>
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-twitter ml-3 fa-2x"></i>
-                            </a>
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-instagram ml-3 fa-2x"></i>
-                            </a>
-
-                        </div>
-                        <h2>
-                            على سامح فتحى
-                        </h2>
-                        <h5>
-                            مدير الشركة
-                        </h5>
-
-                    </div>
-
-                </div>
-                <div class=" position-relative rounded my-2">
-                    <img src='{{asset('front/dist/img/team2.png')}}' class=" rounded" />
-                    <div class=" over-sec position-absolute text-light p-3 rounded pointer">
-                        <div class="mb-4">
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-facebook-f ml-3 fa-2x"></i>
-                            </a>
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-twitter ml-3 fa-2x"></i>
-                            </a>
-                            <a href="#" class=" text-light">
-                                <i class=" fa fa-instagram ml-3 fa-2x"></i>
-                            </a>
-
-                        </div>
-                        <h2>
-                            على سامح فتحى
-                        </h2>
-                        <h5>
-                            مدير الشركة
-                        </h5>
-
-                    </div>
-
-                </div>
-            </div>
-
+                    @endforeach
+                @else
+                    <h3>لا يوجد موظفين</h3>
+                @endif
         </div>
         <img src='{{asset('front/dist/img/image (1).png')}}' class="w-100" />
         <div class="bg-light">
@@ -421,53 +180,29 @@
             <div class="container py-5">
                 <div id="carouselExampleCaptions" class="carousel slide py-5" data-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active">
-                            <img src='{{asset('front/dist/img/team2.png')}}' />
+                        @if(count($botSliders))
+                        @foreach($botSliders as $botSlider)
+                        <li data-target="#carouselExampleCaptions" data-slide-to="{{$loop->iteration-1}}" class="{{$loop->first ? 'active' : ''}}">
+                            <img src='{{$botSlider->image}}' />
                         </li>
-                        <li data-target="#carouselExampleCaptions" data-slide-to="1">
-                            <img src='{{asset('front/dist/img/team3.png')}}' />
-
-                        </li>
-                        <li data-target="#carouselExampleCaptions" data-slide-to="2">
-                            <img src='{{asset('front/dist/img/team1.png')}}' />
-
-                        </li>
+                        @endforeach
+                        @else
+                            <h3>لا توجد شرائح بالأسفل</h3>
+                        @endif
                     </ol>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="carousel-caption">
-
-                                <p class="main-color lead mb-4 text-center">
-                                    شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و
-                                    الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات
-                                </p>
-                                <img src='{{asset('front/dist/img/quote.png')}}' width="50" />
-                                <h2 class="main-color">ندا سامح</h2>
-                                <h5 class="main-color">مصممة</h5>
+                        @foreach($botSliders as $botSlider)
+                            <div class="carousel-item {{$loop->first ? 'active' : ''}}">
+                                <div class="carousel-caption">
+                                    <p class="main-color lead mb-4 text-center">
+                                        {!!$botSlider->$desc!!}
+                                    </p>
+    {{--                                <img src='{{asset('front/dist/img/quote.png')}}' width="50" />--}}
+    {{--                                <h2 class="main-color">ندا سامح</h2>--}}
+    {{--                                <h5 class="main-color">مصممة</h5>--}}
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="carousel-caption">
-                                <p class="main-color lead mb-4 text-center">
-                                    شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و
-                                    الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات
-                                </p>
-                                <img src='{{asset('front/dist/img/quote.png')}}' width="50" />
-                                <h2 class="main-color">ندا سامح</h2>
-                                <h5 class="main-color">مصممة</h5>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="carousel-caption">
-                                <p class="main-color lead mb-4 text-center">
-                                    شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و
-                                    الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات
-                                </p>
-                                <img src='{{asset('front/dist/img/quote.png')}}' width="50" />
-                                <h2 class="main-color">ندا سامح</h2>
-                                <h5 class="main-color">مصممة</h5>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -486,37 +221,17 @@
         <div class=" bg-light py-5 border-black border border-bottom-0 border-left-0 border-right-0 ">
             <div class="container ">
                 <div class="parteners owl-carousel owl-carousel-carousel ">
-                    <div class="p-3 ">
-                        <img src="{{asset('front/dist/img/STC-pay-01.png ')}}" />
-
-                    </div>
-                    <div class="p-3 ">
-                        <img src="{{asset('front/dist/img/accession.png ')}}" />
-
-                    </div>
-                    <div class="p-3 ">
-                        <img src="{{asset('front/dist/img/capital.png ')}}" />
-
-                    </div>
-                    <div class="p-3 ">
-                        <img src="{{asset('front/dist/img/dynamic.png ')}}" />
-
-                    </div>
-                    <div class="p-3 ">
-                        <img src="{{asset('front/dist/img/Forbes-Middle-East-01.png ')}}" />
-
-                    </div>
-                    <div class="p-3 ">
-                        <img src="{{asset('front/dist/img/STC-Channels-01.png ')}}" />
-
-                    </div>
-
-
+                    @if(count($partners))
+                        @foreach($partners as $partner)
+                            <div class="p-3">
+                                <img src="{{$partner->image}}" />
+                            </div>
+                        @endforeach
+                    @else
+                        <h3>لا يوجد شركاء</h3>
+                    @endif
                 </div>
-
-
             </div>
-
         </div>
     </div>
     <div class="py-5 ">
@@ -528,98 +243,56 @@
                 تابع [خر أخبارنا و آخر التحديثات
             </h4>
             <div class="row ">
-                <div class="col-lg-4 ">
-                    <a href="# ">
+                @if(count($posts))
+                @foreach($posts as $post)
+                    <div class="col-lg-4 ">
+                        {{--                        <a href="# ">--}}
                         <div class="news position-relative mb-4 ">
-                            <img src='{{asset('front/dist/img/article (2).png')}}' class="mb-3 " />
+                            <img src="{{$post->image}}" class="mb-3 ">
                             <div class=" position-absolute sec-bk text-light py-2 rounded px-3 text-center ">
                                 <h2 class=" font-weight-bold ">
-                                    10
+                                    {{\Carbon\Carbon::parse($post->created_at)->translatedFormat('d')}}
                                 </h2>
-                                <h5>مارس</h5>
+                                <h5>{{\Carbon\Carbon::parse($post->created_at)->translatedFormat('M')}}</h5>
 
                             </div>
                             <div class="p-3">
-                                <h6 class=" sec-color ">تسويق عقارى , تمليك</h6>
-                                <h5 class="main-color mb-4 ">تسويق عقارى بيع فيلا</h5>
+                                <h6 class=" sec-color ">
+                                    @if(count($post->services))
+                                        @foreach($post->services as $service)
+                                            @if($loop->last)
+                                                {{$service->$title}}
+                                            @else
+                                                {{$service->$title . ','}}
+                                            @endif
+                                        @endforeach
+                                    @else
+                                        <h3>لا توجد خدمات</h3>
+                                    @endif
+                                </h6>
+                                <h5 class="main-color mb-4 ">{{$post->$title}}</h5>
                                 <p class="main-color mb-3 ">
-                                    شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات
-
+                                    {!!$post->$desc!!}
                                 </p>
-                                <h5 class=" main-color ">
-                                    <img src='{{asset('front/dist/img/team1.png')}}' class=" rounded-circle ml-3 " width="40 " height="40 " />
-                                    <span>بواسطة : ندى</span>
-                                </h5>
-
-                            </div>
-
-                        </div>
-                    </a>
-
-                </div>
-                <div class="col-lg-4 ">
-                    <a href="# ">
-                        <div class="news position-relative mb-4 ">
-                            <img src='{{asset('front/dist/img/article (3).png')}}' class="mb-3 " />
-                            <div class=" position-absolute sec-bk text-light py-2 rounded px-3 text-center ">
-                                <h2 class=" font-weight-bold ">
-                                    10
-                                </h2>
-                                <h5>مارس</h5>
-
-                            </div>
-                            <div class="p-3">
-                                <h6 class=" sec-color ">تسويق عقارى , تمليك</h6>
-                                <h5 class="main-color mb-4 ">تسويق عقارى بيع فيلا</h5>
-                                <p class="main-color mb-3 ">
-                                    شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات
-
-                                </p>
-                                <h5 class=" main-color ">
-                                    <img src='{{asset('front/dist/img/team1.png')}}' class=" rounded-circle ml-3 " width="40 " height="40 " />
-                                    <span>بواسطة : ندى</span>
-                                </h5>
-
+                                {{--                                    <h5 class=" main-color ">--}}
+                                {{--                                        <img src="dist/img/team1.png" class=" rounded-circle ml-3 " width="40 " height="40 ">--}}
+                                {{--                                        <span>بواسطة : ندى</span>--}}
+                                {{--                                    </h5>--}}
                             </div>
                         </div>
-                    </a>
-
-                </div>
-                <div class="col-lg-4 ">
-                    <a href="# ">
-                        <div class="news position-relative mb-4 ">
-                            <img src='{{asset('front/dist/img/article (2).png')}}' class="mb-3 " />
-                            <div class=" position-absolute sec-bk text-light py-2 rounded px-3 text-center ">
-                                <h2 class=" font-weight-bold ">
-                                    10
-                                </h2>
-                                <h5>مارس</h5>
-
-                            </div>
-                            <div class="p-3">
-                                <h6 class=" sec-color ">تسويق عقارى , تمليك</h6>
-                                <h5 class="main-color mb-4 ">تسويق عقارى بيع فيلا</h5>
-                                <p class="main-color mb-3 ">
-                                    شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات شركة متخصصة فى التسويق العقارى و التجارى و الاستثمارى والسكنى و لديها تنوع بالمنتجات يغطى كافة القطاعات
-
-                                </p>
-                                <h5 class=" main-color ">
-                                    <img src='{{asset('front/dist/img/team1.png')}}' class=" rounded-circle ml-3 " width="40 " height="40 " />
-                                    <span>بواسطة : ندى</span>
-                                </h5>
-
-                            </div>
-
-                        </div>
-                    </a>
-
-                </div>
-
+                        {{--                        </a>--}}
+                    </div>
+                @endforeach
+                @else
+                    <h3>لا توجد أخبار</h3>
+                @endif
             </div>
             <div class="col-lg-12 mt-4 text-center ">
-                <button class="btn effect01 px-4 pt-2 pb-3 rounded-0 " target="_blank "><span class="px-4 ">
-                    استعراض المزيد
-                </span></button>
+                <a href="{{url('posts')}}">
+                    <button class="btn effect01 px-4 pt-2 pb-3 rounded-0 "><span class="px-4 ">
+                        استعراض المزيد
+                    </span></button>
+                </a>
             </div>
 
         </div>
@@ -631,38 +304,36 @@
         <div class="container-fluid m-0 p-0 ">
             <div class="row m-0 ">
                 <div class="col-lg-6 py-lg-5 ">
-                    <form class="py-5 px-3 px-lg-5 ">
+                    <form class="py-3 px-2 px-lg-4 " method="post" action="{{route('contact-us')}}">
+                        @csrf
                         <h3 class="mb-5 h2 font-weight-bold ">
                             تواصل معنا
                         </h3>
                         <div class="row ">
                             <div class="col-lg-6 ">
-                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text " placeholder="اﻻسم ">
+                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text" placeholder="اﻻسم " name="name">
 
                             </div>
                             <div class="col-lg-6 ">
-                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text " placeholder="البريد اﻻلكتورنى ">
+                                <input class="form-control form-control-lg rounded-0 mb-3 " type="email" placeholder="البريد اﻻلكتورنى " name="email">
 
                             </div>
                             <div class="col-lg-6 ">
-                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text " placeholder="رقم الجوال ">
+                                <input class="form-control form-control-lg rounded-0 mb-3 " type="number" placeholder="رقم الجوال " name="phone">
 
                             </div>
                             <div class="col-lg-6 ">
-                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text " placeholder="الموضوع ">
+                                <input class="form-control form-control-lg rounded-0 mb-3 " type="text" placeholder="الموضوع " name="title">
 
                             </div>
                             <div class="col-lg-12 ">
-                                <textarea rows="6 " class="form-control rounded-0 mb-3 " placeholder="الرسالة "></textarea>
+                                <textarea rows="6 " class="form-control rounded-0 mb-3 " placeholder="الرسالة " name="message"></textarea>
 
                             </div>
                             <div class="col-lg-12 mt-4 ">
-                                <button class="btn effect01 px-4 pt-2 pb-3 rounded-0 " target="_blank "><span class="px-4 ">ارسال</span></button>
+                                <button type="submit" class="btn effect01 px-4 pt-2 pb-3 rounded-0 "><span class="px-4 ">ارسال</span></button>
                             </div>
-
-
                         </div>
-
                     </form>
 
                 </div>
