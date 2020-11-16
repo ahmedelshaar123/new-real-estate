@@ -9,7 +9,7 @@ return [
     'home' => 'الرئيسية',
     'news' => 'الأخبار',
     'our_latest_news' => 'أخر الأخبار',
-    'follow_our_last_news_&_latest_updates' => 'تابع أخر الأخبار والتحديثات',
+    'follow_our_latest_news_&_latest_updates' => 'تابع أخر الأخبار والتحديثات',
     'no_services' => 'خدماتنا',
     'no_news' => 'لا توجد أخبار',
     'no_partners' => 'لا يوجد شركاء',
@@ -45,6 +45,8 @@ return [
     'start' => 'البدء',
     'our_news' => 'أخبارنا',
     'no_top_sliders' => 'لا توجد شرائح بالأعلي',
+    'work_times' => 'مواعيد العمل',
+    'rewards_&_trophies' => 'الجوائز والأوسمة',
 
 
 

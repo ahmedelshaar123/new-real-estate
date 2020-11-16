@@ -18,7 +18,7 @@
                     @lang('front.our_latest_news')
                 </h3>
                 <h4 class=" main-color text-center mb-5 ">
-                    @lang('front.follow_our_last_news_&_latest_updates')
+                    @lang('front.follow_our_latest_news_&_latest_updates')
                 </h4>
                 <div class="row ">
                     @if(count($posts))

@@ -9,7 +9,7 @@ return [
     'home' => 'Home',
     'news' => 'News',
     'our_latest_news' => 'Our Latest News',
-    'follow_our_last_news_&_latest_updates' => 'Follow Our Last News And Latest Updates',
+    'follow_our_latest_news_&_latest_updates' => 'Follow Our Last News And Latest Updates',
     'no_services' => 'No Services',
     'no_news' => 'No News',
     'no_partners' => 'No Partners',
@@ -45,5 +45,7 @@ return [
     'start' => 'Start',
     'our_news' => 'Our News',
     'no_top_sliders' => 'No Top Sliders',
+    'work_times' => 'Work Times',
+    'rewards_&_trophies' => 'Rewards And Trophies',
 
 ];

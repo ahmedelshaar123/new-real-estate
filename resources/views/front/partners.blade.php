@@ -5,8 +5,8 @@
         <div class="position-absolute">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{url('/')}}">@lang('home')</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">@lang('our_partners')</li>
+                    <li class="breadcrumb-item"><a href="{{url('/')}}">@lang('front.home')</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@lang('front.our_partners')</li>
                 </ol>
             </nav>
         </div>
@@ -21,7 +21,7 @@
             @endforeach
             {{$partners->links()}}
             @else
-                <h3>@lang('no_partners')</h3>
+                <h3>@lang('front.no_partners')</h3>
             @endif
         </div>
     </div>
