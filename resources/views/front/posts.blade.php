@@ -5,8 +5,8 @@
         <div class="position-absolute">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{url('/')}}">الرئيسية</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">اﻻخبار</li>
+                    <li class="breadcrumb-item"><a href="{{url('/')}}">@lang('front.home')</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@lang('front.news')</li>
                 </ol>
             </nav>
         </div>
@@ -15,10 +15,10 @@
         <div class="py-5 ">
             <div class="container pb-5 ">
                 <h3 class=" main-color text-center font-weight-bold h2 ">
-                    آخر أخبارنا
+                    @lang('front.our_latest_news')
                 </h3>
                 <h4 class=" main-color text-center mb-5 ">
-                    تابع [خر أخبارنا و آخر التحديثات
+                    @lang('front.follow_our_last_news_&_latest_updates')
                 </h4>
                 <div class="row ">
                     @if(count($posts))
@@ -45,7 +45,7 @@
                                             @endif
                                         @endforeach
                                         @else
-                                            <h3>لا توجد خدمات</h3>
+                                            <h3>@lang('front.no_services')</h3>
                                        @endif
                                     </h6>
                                     <h5 class="main-color mb-4 ">{{$post->$title}}</h5>
@@ -63,7 +63,7 @@
                     @endforeach
                     {{$posts->links()}}
                     @else
-                        <h3>لا توجد أخبار</h3>
+                        <h3>@lang('front.no_news')</h3>
                     @endif
                 </div>
 {{--                <div class="text-left clearfix mt-5">--}}
@@ -104,7 +104,7 @@
                         </div>
                     @endforeach
                     @else
-                        <h3>لا يوجد شركاء</h3>
+                        <h3>@lang('front.no_partners')</h3>
                     @endif
                 </div>
             </div>
