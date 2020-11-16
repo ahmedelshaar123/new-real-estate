@@ -22,13 +22,14 @@ class IndexController extends Controller
         $desc = "desc_$lang";
         $value = "value_$lang";
         $services = Service::get()->take(3);
+        $allPosts = Post::all();
         $posts = Post::get()->take(3);
         $featuredEstates = FeaturedEstate::all();
         $team = CompanyTeam::all();
         $botSliders = BottomSlider::all();
         $partners = Partner::all();
         $description = StaticPage::where('key', 'desc')->first();
-        return view('front.index', compact('posts','partners', 'botSliders', 'name', 'job', 'services', 'title', 'desc', 'value', 'description', 'address', 'featuredEstates', 'team'));
+        return view('front.index', compact('allPosts', 'posts','partners', 'botSliders', 'name', 'job', 'services', 'title', 'desc', 'value', 'description', 'address', 'featuredEstates', 'team'));
 
     }
 }

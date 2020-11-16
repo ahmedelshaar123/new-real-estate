@@ -289,9 +289,11 @@
             </div>
             <div class="col-lg-12 mt-4 text-center ">
                 <a href="{{url('posts')}}">
-                    <button class="btn effect01 px-4 pt-2 pb-3 rounded-0 "><span class="px-4 ">
-                        استعراض المزيد
-                    </span></button>
+                    @if($allPosts->count() > 3)
+                        <button class="btn effect01 px-4 pt-2 pb-3 rounded-0 "><span class="px-4 ">
+                            استعراض المزيد
+                        </span></button>
+                    @endif
                 </a>
             </div>
 
@@ -337,11 +339,11 @@
                     </form>
 
                 </div>
-                <div class="col-lg-6 p-3 p-lg-0 ">
-                    <div class="wheel-map dropshadow h-100 " data-marker='dist/img/marker.svg' data-lat="45.7143528 " data-lng="-74.0059731 " data-zoom="10 " data-style="style-1" style="min-height: 400px;">
-                    </div>
+{{--                <div class="col-lg-6 p-3 p-lg-0 ">--}}
+{{--                    <div class="wheel-map dropshadow h-100 " data-marker='dist/img/marker.svg' data-lat="45.7143528 " data-lng="-74.0059731 " data-zoom="10 " data-style="style-1" style="min-height: 400px;">--}}
+{{--                    </div>--}}
 
-                </div>
+{{--                </div>--}}
 
             </div>
 
