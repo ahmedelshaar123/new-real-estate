@@ -73,7 +73,6 @@
 
                     <li class="nav-item {{request()->segment(2) == 'contact-us' ? 'active' : '' }}">
                         <a class="nav-link" href="{{url('contact-us')}} "> اتصل بنا</a>
-
                     </li>
 
                     <a href="#">

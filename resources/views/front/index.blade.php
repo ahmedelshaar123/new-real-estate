@@ -339,11 +339,12 @@
                     </form>
 
                 </div>
-{{--                <div class="col-lg-6 p-3 p-lg-0 ">--}}
+                <div class="col-lg-6 p-3 p-lg-0 ">
 {{--                    <div class="wheel-map dropshadow h-100 " data-marker='dist/img/marker.svg' data-lat="45.7143528 " data-lng="-74.0059731 " data-zoom="10 " data-style="style-1" style="min-height: 400px;">--}}
 {{--                    </div>--}}
+                    <img class="wheel-map dropshadow h-100 " src="{{asset('uploads/map.jfif')}}" alt="map">
 
-{{--                </div>--}}
+                </div>
 
             </div>
 

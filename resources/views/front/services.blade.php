@@ -13,11 +13,12 @@
         </div>
 
     </div>
+
     <div class="container py-5">
         @if(count($services))
         @foreach($services as $service)
         <div class="row py-5">
-            <div class=" col-lg-6 {{$loop->iteration % 2 == 1 ? 'order-2' : 'order-1'}}">
+            <div class=" col-lg-6 @if($loop->iteration  % 2 != 0) order-1 @elseif($loop->iteration  % 2 == 0) order-2 @endif">
                 <div class=" px-3 py-4   mb-4 mb-lg-0">
                     <img src='{{$service->icon}}' class="mb-3" />
                     <h3 class=" main-color mb-4">
@@ -28,7 +29,7 @@
                     </p>
                 </div>
             </div>
-            <div class=" col-lg-6 {{$loop->iteration % 2 == 1 ? 'order-1' : 'order-2'}} order-lg-12">
+            <div class=" col-lg-6 order-lg-12 @if($loop->iteration  % 2 == 0) order-1 @elseif($loop->iteration  % 2 == 0) order-2 @endif">
                 <img src='{{$service->image}}' />
             </div>
         </div>
