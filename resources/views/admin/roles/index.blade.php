@@ -51,7 +51,7 @@
                 </div>
         </div>
         <div class="text-center">
-            {!! $roles->render() !!}
+{{--            {!! $roles->render() !!}--}}
         </div>
         @else
             <div class="col-md-4 col-md-offset-4">

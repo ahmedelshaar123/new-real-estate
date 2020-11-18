@@ -49,7 +49,7 @@
                 </div>
         </div>
         <div class="text-center">
-            {!! $partners->render() !!}
+{{--            {!! $partners->render() !!}--}}
         </div>
         @else
             <div class="col-md-4 col-md-offset-4">

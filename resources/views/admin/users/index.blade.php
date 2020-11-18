@@ -55,7 +55,7 @@
                 </div>
         </div>
         <div class="text-center">
-            {!! $users->render() !!}
+{{--            {!! $users->render() !!}--}}
         </div>
 {{--        @else--}}
 {{--            <div class="col-md-4 col-md-offset-4">--}}

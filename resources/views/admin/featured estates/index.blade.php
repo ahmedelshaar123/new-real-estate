@@ -53,7 +53,7 @@
                 </div>
         </div>
         <div class="text-center">
-            {!! $feat_estates->render() !!}
+{{--            {!! $feat_estates->render() !!}--}}
         </div>
         @else
             <div class="col-md-4 col-md-offset-4">

@@ -69,7 +69,7 @@
                 </div>
         </div>
         <div class="text-center">
-            {!! $comp_team->render() !!}
+{{--            {!! $comp_team->render() !!}--}}
         </div>
         @else
             <div class="col-md-4 col-md-offset-4">

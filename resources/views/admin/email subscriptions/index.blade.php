@@ -31,7 +31,7 @@
                 </div>
         </div>
         <div class="text-center">
-            {!! $subscribers->render() !!}
+{{--            {!! $subscribers->render() !!}--}}
         </div>
         @else
             <div class="col-md-4 col-md-offset-4">

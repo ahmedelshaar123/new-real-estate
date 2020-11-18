@@ -39,7 +39,7 @@
                 </div>
         </div>
         <div class="text-center">
-            {!! $contacts->render() !!}
+{{--            {!! $contacts->render() !!}--}}
         </div>
         @else
             <div class="col-md-4 col-md-offset-4">
