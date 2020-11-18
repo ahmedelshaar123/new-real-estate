@@ -17,7 +17,7 @@ class CompanyTeamController extends Controller
      */
     public function index()
     {
-        $comp_team = CompanyTeam::paginate(10);
+        $comp_team = CompanyTeam::all();
         $lang = \LaravelLocalization::getCurrentLocale();
         $name = 'name_'.$lang;
         $job = 'job_'.$lang;

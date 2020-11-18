@@ -15,7 +15,7 @@ class FeaturedEstateController extends Controller
    */
   public function index()
   {
-      $feat_estates = FeaturedEstate::paginate(10);
+      $feat_estates = FeaturedEstate::all();
       $lang = \LaravelLocalization::getCurrentLocale();
       $title = 'title_'.$lang;
       $address = 'address_'.$lang;

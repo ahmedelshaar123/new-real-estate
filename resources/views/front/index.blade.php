@@ -75,7 +75,7 @@
                             <a href="{{asset($photo->path)}}" class="item">
                         @endforeach
                             <div class=" position-relative  mb-2 w-100 h-100">
-                                <img src='{{asset($featuredEstate->photos->first()->path)}}' class="w-100 h-100" />
+                                <img src='{{asset($featuredEstate->photos()->first()->path)}}' class="w-100 h-100" />
                                 <div class=" over-sec position-absolute text-light p-3  pointer">
                                     <i class="fa fa-plus fa-3x text-light mt-5"></i>
                                     <!-- <div> -->

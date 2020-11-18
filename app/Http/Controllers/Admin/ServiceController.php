@@ -15,7 +15,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::paginate(10);
+        $services = Service::all();
         $lang = \LaravelLocalization::getCurrentLocale();
         $title = 'title_'.$lang;
         $desc = 'desc_'.$lang;

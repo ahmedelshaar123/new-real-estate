@@ -15,7 +15,7 @@ class EmailSubscriptionController extends Controller
    */
   public function index()
   {
-      $subscribers = EmailSubscription::paginate(10);
+      $subscribers = EmailSubscription::all();
       return view('admin.email subscriptions.index', compact('subscribers'));
 
   }

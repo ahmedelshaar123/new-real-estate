@@ -15,7 +15,7 @@ class TopSliderController extends Controller
      */
     public function index()
     {
-        $top_sliders = TopSlider::paginate(10);
+        $top_sliders = TopSlider::all();
         $lang = \LaravelLocalization::getCurrentLocale();
         $title = 'title_'.$lang;
         $desc = 'desc_'.$lang;

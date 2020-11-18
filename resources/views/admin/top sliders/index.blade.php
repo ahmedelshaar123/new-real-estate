@@ -14,7 +14,7 @@
         <div class="box-body">
             @if(count($top_sliders))
                 <div class="table-responsive">
-                    <table class="data-table table table-bordered">
+                    <table class="data-table table table-bordered" id="table1">
                         <thead>
                         <th class="text-center">#</th>
                         <th class="text-center">{{trans('admin.title')}}</th>

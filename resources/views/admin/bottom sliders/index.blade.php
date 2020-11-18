@@ -14,7 +14,7 @@
         <div class="box-body">
             @if(count($bot_sliders))
                 <div class="table-responsive">
-                    <table class="data-table table table-bordered">
+                    <table class="data-table table table-bordered" id="table1">
                         <thead>
                         <th class="text-center">#</th>
                         <th class="text-center">{{trans('admin.desc')}}</th>
@@ -49,7 +49,7 @@
                 </div>
         </div>
         <div class="text-center">
-            {!! $bot_sliders->render() !!}
+{{--            {!! $bot_sliders->render() !!}--}}
         </div>
         @else
             <div class="col-md-4 col-md-offset-4">

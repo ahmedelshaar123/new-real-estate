@@ -16,7 +16,7 @@ class BottomSliderController extends Controller
      */
     public function index()
     {
-        $bot_sliders = BottomSlider::paginate(10);
+        $bot_sliders = BottomSlider::all();
         $lang = \LaravelLocalization::getCurrentLocale();
         $desc = 'desc_'.$lang;
         return view('admin.bottom sliders.index', compact('bot_sliders', 'desc'));

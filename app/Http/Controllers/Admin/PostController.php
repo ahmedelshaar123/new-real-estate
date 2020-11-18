@@ -16,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::paginate(10);
+        $posts = Post::all();
         $lang = \LaravelLocalization::getCurrentLocale();
         $title = 'title_'.$lang;
         $desc = 'desc_'.$lang;
