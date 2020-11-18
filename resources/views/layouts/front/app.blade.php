@@ -12,7 +12,7 @@
     @stack('styles')
 </head>
 
-<body class="rtl" dir='rtl'>
+<body @if(app()->getLocale() == 'ar') class="rtl"  dir='rtl' @else class="ltr" dir='ltr' @endif>
 
 <!-- <body> -->
 @include('layouts.front.header')
