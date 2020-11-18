@@ -71,26 +71,28 @@
                 @if(count($featuredEstates))
                 @foreach($featuredEstates as $featuredEstate)
                     <div class="col-lg-3 col-md-6 p-lg-0">
-                    <a href="{{asset($featuredEstate->photos()->first()->path)}}" class="item">
-                        <div class=" position-relative  mb-2 w-100 h-100">
-                            <img src='{{asset($featuredEstate->photos()->first()->path)}}' class="w-100 h-100" />
-                            <div class=" over-sec position-absolute text-light p-3  pointer">
-                                <i class="fa fa-plus fa-3x text-light mt-5"></i>
-                                <!-- <div> -->
-                                <h2>
-                                    {{$featuredEstate->$title}}
-                                </h2>
-                                <h5>
-                                    {{$featuredEstate->$address}}
-                                </h5>
-                                <!-- </div> -->
+                        @foreach($featuredEstate->photos as $photo)
+                        <a href="{{asset($photo->path)}}" class="item">
+                            @endforeach
+                            <div class=" position-relative  mb-2 w-100 h-100">
+                                <img src='{{asset($featuredEstate->photos->first()->path)}}' class="w-100 h-100" />
+                                <div class=" over-sec position-absolute text-light p-3  pointer">
+                                    <i class="fa fa-plus fa-3x text-light mt-5"></i>
+                                    <!-- <div> -->
+                                    <h2>
+                                        {{$featuredEstate->$title}}
+                                    </h2>
+                                    <h5>
+                                        {{$featuredEstate->$address}}
+                                    </h5>
+                                    <!-- </div> -->
 
+
+                                </div>
 
                             </div>
-
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
                 @endforeach
                 @else
                     <h3>@lang('front.no_featured_real_estates')</h3>
