@@ -72,8 +72,8 @@
                 @foreach($featuredEstates as $featuredEstate)
                     <div class="col-lg-3 col-md-6 p-lg-0">
                         @foreach($featuredEstate->photos as $photo)
-                        <a href="{{asset($photo->path)}}" class="item">
-                            @endforeach
+                            <a href="{{asset($photo->path)}}" class="item">
+                        @endforeach
                             <div class=" position-relative  mb-2 w-100 h-100">
                                 <img src='{{asset($featuredEstate->photos->first()->path)}}' class="w-100 h-100" />
                                 <div class=" over-sec position-absolute text-light p-3  pointer">

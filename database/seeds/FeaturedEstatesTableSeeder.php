@@ -26,7 +26,7 @@ class FeaturedEstatesTableSeeder extends Seeder
             ],
 
             [
-                'path' => 'uploads/featured estates/villa2.png',
+                'path' => 'uploads/featured estates/villa.png',
                 'photoable_type' => 'App\Models\FeaturedEstate',
                 'photoable_id' => '1',
             ],
