@@ -118,7 +118,7 @@
     <div class="container py-3 clearfix">
         <h5 class="text-black mb-0 mt-3" style="line-height: 2;">@lang('front.all_rights_reserved') © 2020 <a href="# " class="sec-color "> Smart Level</a>
             <span class="float-left ">
-                    <img src='{{asset('front/ dist/img/smart-level.png ')}}' width="200"/>
+                    <img src='{{asset('front/dist/img/smart-level.png ')}}' width="200"/>
                 </span>
         </h5>
     </div>
