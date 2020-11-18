@@ -412,7 +412,7 @@
         $('#table1').DataTable(
             {
                 searching: true,
-                paging: false,
+                paging: true,
                 //scrollY: 200
                 //deferRender: true
                 "info": false,
