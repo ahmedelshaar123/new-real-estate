@@ -22,7 +22,7 @@ return [
     'real_estate' => 'الشركة العقارية',
     'fast_links' => 'روابط سريعة',
     'real_estates_news' => 'أخبار الشركات العقارية',
-    'contact_us' => 'اتصل معانا',
+    'contact_us' => 'اتصل معنا',
     'address' => 'العنوان',
     'phone' => 'الجوال',
     'do_not_miss_to_follow_up_and_subscribe_to_our_new_services_or_you_can_follow_us_now' => 'لا تنسي المتابعة والاشتراك لأخر خدماتنا الجديدة أو يمكنك متابعتنا',
@@ -47,6 +47,7 @@ return [
     'no_top_sliders' => 'لا توجد شرائح بالأعلي',
     'work_times' => 'مواعيد العمل',
     'rewards_&_trophies' => 'الجوائز والأوسمة',
+    'search' => 'ابحث',
 
 
 

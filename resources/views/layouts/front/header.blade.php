@@ -74,11 +74,11 @@
                     <li class="nav-item {{request()->segment(2) == 'contact-us' ? 'active' : '' }}">
                         <a class="nav-link" href="{{url('contact-us')}} ">@lang('front.contact_us')</a>
                     </li>
-
-                    <a href="#">
+                    <form method="get" action="{{url('search-news')}}">
                         <i class="fa fa-search mr-4 mt-2 main-color" style="font-size: 28px;"></i>
-                    </a>
-
+                        <input type="text" name="search" />
+                        <button type="submit">@lang('front.search')</button>
+                    </form>
                 </ul>
             </div>
 

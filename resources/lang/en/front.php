@@ -47,5 +47,6 @@ return [
     'no_top_sliders' => 'No Top Sliders',
     'work_times' => 'Work Times',
     'rewards_&_trophies' => 'Rewards And Trophies',
+    'search' => 'Search',
 
 ];
