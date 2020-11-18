@@ -33,15 +33,15 @@
             selector: '.item'
         });
     </script>
-    <script>
-        $(document).ready(function() {
-            if ($('.wheel-map ').length) {
-                $('.wheel-map ').each(function() {
-                    initialize(this);
-                });
-            }
-        });
-    </script>
+{{--    <script>--}}
+{{--        $(document).ready(function() {--}}
+{{--            if ($('.wheel-map ').length) {--}}
+{{--                $('.wheel-map ').each(function() {--}}
+{{--                    initialize(this);--}}
+{{--                });--}}
+{{--            }--}}
+{{--        });--}}
+{{--    </script>--}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     @if(session()->has('success'))
         <script>
