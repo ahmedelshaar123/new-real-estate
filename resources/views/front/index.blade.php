@@ -103,7 +103,7 @@
     <div class="py-5">
         <div class="container py-5">
             <h3 class=" text-black-50 text-center mb-3 h2 font-weight-bold">
-                @lang('front.no_services')
+                @lang('front.team')
             </h3>
             <p class=" text-center text-black-50 lead mb-5">
                 @lang('front.we_are_an_integrated_team_and_we_strive_to_provide_the_best')
