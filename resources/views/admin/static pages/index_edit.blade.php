@@ -2,7 +2,7 @@
                                 'page_header'       => trans('admin.site'),
                                 'page_description'  => trans('admin.static_pages')
                                 ])
-@inject('staticPage', 'App\Models\Setting')
+@inject('staticPage', 'App\Models\StaticPage')
 
 @section('content')
     <div class="box box-primary">
