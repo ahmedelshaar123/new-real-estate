@@ -124,27 +124,26 @@
         </div>
     </div>
     <div class="modal fade p-0" id="searchModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog mt-5 pt-5" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+{{--                <div class="modal-header">--}}
+{{--                    <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->--}}
+{{--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
+{{--                        <span aria-hidden="true">&times;</span>--}}
+{{--                    </button>--}}
+{{--                </div>--}}
+                <div class="close-btn pointer text-center" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times text-white" style="font-size: 23px;margin-top: 18px;"></i>
+
                 </div>
                 <div class="modal-body userModel text-center">
                     <h3>
                         @lang('front.search_news')
                     </h3>
                     <form class="table" method="get" action="{{url('search-news')}}">
-                        <div class="input-group mb-3  mt-5 dropshadow">
-                            <input type="text" class="form-control " placeholder="" aria-label="Recipient's username"
-                                   aria-describedby="basic-addon2" name="search">
-                            <div class="input-group-append">
-                                <span class="input-group-text" id="basic-addon2"><i class="fas fa-search"></i></span>
-                            </div>
-                        </div>
-                        <button type="submit" style="background-color: #0a6ebd">@lang('front.search')</button>
+                        <i class="fa fa-search mr-4 mt-2 main-color pointer" style="font-size: 28px"></i>
+                        <input type="text" name="search">
+                        <button type="submit">@lang('front.search')</button>
                     </form>
 {{--                    <a href="#" class="btn6 mt-3 font-weight-bold px-4 py-3 h5">@lang('front.search')</a>--}}
                 </div>
