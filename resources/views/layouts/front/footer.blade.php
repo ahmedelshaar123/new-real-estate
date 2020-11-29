@@ -92,7 +92,6 @@
                 <div class=" border border-silver rounded p-3 mt-5 ">
                     <h5 class=" h6 text-white mb-4 ">
                         @lang('front.do_not_miss_to_follow_up_and_subscribe_to_our_new_services_or_you_can_follow_us_now')
-
                     </h5>
                     <form method="post" action="{{route('email-subscribe')}}">
                         @csrf
@@ -104,9 +103,9 @@
                                         </button>
                             </div>
                             <input type="email" class="form-control form-control-lg text-right " name="email" placeholder="@lang('front.email') " aria-label="Recipient 's username" aria-describedby="basic-addon2" style="border-bottom-left-radius: 0px;
-                                                        border-top-left-radius: 0px ;
-                                                        border-top-right-radius: 5px;
-                                                        border-bottom-right-radius: 5px;">
+                                                            border-top-left-radius: 0px ;
+                                                            border-top-right-radius: 5px;
+                                                            border-bottom-right-radius: 5px;">
                         </div>
                     </form>
                 </div>
