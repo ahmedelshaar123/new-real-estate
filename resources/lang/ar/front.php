@@ -48,6 +48,7 @@ return [
     'work_times' => 'مواعيد العمل',
     'rewards_&_trophies' => 'الجوائز والأوسمة',
     'search' => 'ابحث',
+    'search_news' => 'البخث عن الأخبار',
 
 
 

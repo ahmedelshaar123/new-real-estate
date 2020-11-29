@@ -16,7 +16,7 @@
             @if(count($partners))
             @foreach($partners as $partner)
                 <a href="{{$partner->link}}" target="_blank">
-                    <img src='{{$partner->image}}' class=" d-inline-block ml-5 mb-5 pointer company" />
+                    <img src='{{$partner->image}}' class=" d-inline-block ml-5 mb-5 pointer company" style="width: 158px" height="47px"/>
                 </a>
             @endforeach
             {{$partners->links()}}

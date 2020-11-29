@@ -20,7 +20,7 @@
            <div class="row py-5">
                 <div class=" col-lg-6 {{$loop->iteration % 2 == 1 ? 'order-1' : 'order-2'}}">
                     <div class=" px-3 py-4   mb-4 mb-lg-0">
-                        <img src='{{$service->icon}}' class="mb-3" />
+                        <img src='{{$service->icon}}' class="mb-3" style="width: 109px" height="106px" />
                         <h3 class=" main-color mb-4">
                             {{$service->$title}}
                         </h3>
@@ -32,7 +32,7 @@
 
                 </div>
                 <div class=" col-lg-6 {{$loop->iteration % 2 == 1 ? 'order-2' : 'order-1'}} ">
-                    <img src='{{$service->image}}' />
+                    <img src='{{$service->image}}' style="width: 619px" height="412px"/>
 
                 </div>
 
@@ -49,7 +49,7 @@
                 @if(count($partners))
                     @foreach($partners as $partner)
                         <div class="p-3">
-                            <img src="{{$partner->image}}" />
+                            <img src="{{$partner->image}}" style="width: 158px" height="47px"/>
                         </div>
                     @endforeach
                 @else

@@ -100,7 +100,7 @@
                     @if(count($partners))
                     @foreach($partners as $partner)
                         <div class="p-3">
-                            <img src="{{$partner->image}}" />
+                            <img src="{{$partner->image}}" style="width: 158px" height="47px"/>
                         </div>
                     @endforeach
                     @else

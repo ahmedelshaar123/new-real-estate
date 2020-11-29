@@ -48,5 +48,6 @@ return [
     'work_times' => 'Work Times',
     'rewards_&_trophies' => 'Rewards And Trophies',
     'search' => 'Search',
+    'search_news' => 'Search News',
 
 ];
