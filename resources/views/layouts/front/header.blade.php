@@ -59,7 +59,7 @@
                         <a href="{{$twitterVC->$valueVC}}" class="mr-4  icon-nav " target="_blank">
                             <i class="fa fa-twitter"></i>
                         </a>
-                        <a href="{{$facebookVC->$valueVC}}" class="mr-4  icon-nav" target="_blank">
+                        <a href="{{$facebookVC->$valueVC}}" class="mr-4 icon-nav" target="_blank">
                             <i class="fa fa-facebook"></i>
                         </a>
 
