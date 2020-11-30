@@ -18,6 +18,40 @@
                         </h5>
 
                     </a>
+&nbsp;
+&nbsp;
+&nbsp;
+                        <a href="#" class="dropdown dropdown-toggle text-white" data-toggle="dropdown">
+                            <i class="fa fa-flag-o"></i>
+                        </a>
+                        <ul class="dropdown-menu" >
+                            <li>
+                                <ul class="menu text-center">
+{{--                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)--}}
+{{--                                        <li style="list-style: none" class="text-center">--}}
+{{--                                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">--}}
+{{--                                                {{ $properties['native'] }}--}}
+{{--                                            </a>--}}
+{{--                                        </li>--}}
+{{--                                    @endforeach--}}
+                                        @if(LaravelLocalization::getCurrentLocale() == 'ar' )
+                                        <li style="list-style: none" class="text-center">
+                                            <a class="text-center" rel="alternate" hreflang="en"
+                                               href="{{LaravelLocalization::getLocalizedURL('en', null, [], true)}}">
+                                                English
+                                            </a>
+                                        </li>
+                                       @else
+                                        <li style="list-style: none" class="text-center">
+                                            <a class="text-center" rel="alternate" hreflang="ar"
+                                               href="{{LaravelLocalization::getLocalizedURL('ar', null, [], true)}}">
+                                                العربية
+                                            </a>
+                                        </li>
+                                        @endif
+                                </ul>
+                            </li>
+                        </ul>
                     <div class="d-block d-md-inline-block  text-center text-md-left float-md-left">
                         <a href="{{$instagramVC->$valueVC}}" class=" icon-nav" target="_blank">
                             <i class="fa fa-instagram"></i>
@@ -134,7 +168,6 @@
 {{--                </div>--}}
                 <div class="close-btn pointer text-center" data-dismiss="modal" aria-label="Close">
                     <i class="fa fa-times text-white" style="font-size: 23px;margin-top: 18px;"></i>
-
                 </div>
                 <div class="modal-body userModel text-center">
                     <h3>
